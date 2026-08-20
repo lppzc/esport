@@ -216,6 +216,19 @@ button { font-family: inherit; }
 .result-meta { margin: 0 2px 12px; color: var(--text-dim); font-size: 13px; }
 .result-meta b { color: var(--text); }
 
+/* ================= 滚动加载（浏览限制） ================= */
+.load-more {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 0 28px;
+}
+
+.load-more.end { padding: 0 0 24px; }
+
+.load-more-hint { font-size: 12px; color: var(--text-dim); }
+
 /* ================= 时间轴 ================= */
 .timeline { position: relative; padding: 6px 0 30px; }
 

@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { MatchStatus } from './types';
 import {
   games,
@@ -26,6 +26,18 @@ const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
   { value: 'finished', label: '已结束' },
 ];
 
+/** 浏览限制：初始只加载时间轴起点起 3 个月内的赛程 */
+const INITIAL_MONTHS = 3;
+/** 每次滚动到底部后继续扩展的月数 */
+const CHUNK_MONTHS = 3;
+
+/** 日期 d 偏移 n 个月后的时间戳 */
+function shiftMonths(d: Date, n: number): number {
+  const r = new Date(d.getTime());
+  r.setMonth(r.getMonth() + n);
+  return r.getTime();
+}
+
 function scrollToTodayOrNearest(keys: string[]) {
   if (keys.length === 0) return;
   const tk = todayKey();
@@ -41,6 +53,15 @@ export default function App() {
   const [selectedTeamIds, setSelectedTeamIds] = useState<string[]>([]);
   const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
   const [pickerOpen, setPickerOpen] = useState(false);
+  const [visibleMonths, setVisibleMonths] = useState(INITIAL_MONTHS);
+
+  // 筛选或排序方向变化后，浏览窗口重置回初始 3 个月
+  const filterSignature = `${gameFilter}|${statusFilter}|${sortOrder}|${selectedTeamIds.join(',')}`;
+  const [lastSignature, setLastSignature] = useState(filterSignature);
+  if (filterSignature !== lastSignature) {
+    setLastSignature(filterSignature);
+    setVisibleMonths(INITIAL_MONTHS);
+  }
 
   const filtered = useMemo(() => {
     const list = allMatches.filter((m) => {
@@ -60,15 +81,48 @@ export default function App() {
     return list;
   }, [gameFilter, statusFilter, selectedTeamIds, sortOrder]);
 
+  /**
+   * 浏览限制：从排序后列表的起点（desc=最新一场，asc=最旧一场）开始，
+   * 仅展示 visibleMonths 个月内的比赛，其余等滚动到底部再加载
+   */
+  const visible = useMemo(() => {
+    if (filtered.length === 0) return filtered;
+    const anchor = new Date(filtered[0].startTime);
+    const boundary = shiftMonths(anchor, sortOrder === 'desc' ? -visibleMonths : visibleMonths);
+    return filtered.filter((m) => {
+      const t = new Date(m.startTime).getTime();
+      return sortOrder === 'desc' ? t >= boundary : t <= boundary;
+    });
+  }, [filtered, visibleMonths, sortOrder]);
+
+  const hasMore = visible.length < filtered.length;
+
+  // 哨兵元素接近视口时自动加载下一段赛程
+  const sentinelRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el || !hasMore) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        if (entries.some((e) => e.isIntersecting)) {
+          setVisibleMonths((v) => v + CHUNK_MONTHS);
+        }
+      },
+      { rootMargin: '600px 0px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [hasMore, visibleMonths, visible.length, filtered.length]);
+
   const toggleTeam = (id: string) => {
     setSelectedTeamIds((prev) => (prev.includes(id) ? prev.filter((t) => t !== id) : [...prev, id]));
   };
 
   const dayKeys = useMemo(() => {
     const s = new Set<string>();
-    for (const m of filtered) s.add(dateKeyOf(m.startTime));
+    for (const m of visible) s.add(dateKeyOf(m.startTime));
     return [...s];
-  }, [filtered]);
+  }, [visible]);
 
   return (
     <div className="app">
@@ -166,9 +220,31 @@ export default function App() {
       <main>
         <div className="result-meta">
           共 <b>{filtered.length}</b> 场比赛
+          {hasMore && (
+            <>
+              {' '}· 已加载 <b>{visible.length}</b> 场（近 {visibleMonths} 个月）
+            </>
+          )}
           {selectedTeamIds.length > 0 && <> · 按已选 {selectedTeamIds.length} 支战队筛选</>}
         </div>
-        <Timeline matches={filtered} />
+        <Timeline matches={visible} />
+        {hasMore ? (
+          <div className="load-more" ref={sentinelRef}>
+            <button
+              className="btn ghost"
+              onClick={() => setVisibleMonths((v) => v + CHUNK_MONTHS)}
+            >
+              ↓ 加载{sortOrder === 'desc' ? '更早' : '更晚'}的赛程（{CHUNK_MONTHS} 个月）
+            </button>
+            <span className="load-more-hint">继续下滑会自动加载之后的比赛</span>
+          </div>
+        ) : (
+          filtered.length > 0 && (
+            <div className="load-more end">
+              <span className="load-more-hint">已加载全部赛程</span>
+            </div>
+          )
+        )}
       </main>
 
       <footer className="site-footer">
