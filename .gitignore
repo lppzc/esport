@@ -1,0 +1,19 @@
+# ---- Node / 前端构建 ----
+web/node_modules/
+web/dist/
+web/.npm-cache/
+*.log
+npm-debug.log*
+
+# ---- Python ----
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+.DS_Store
