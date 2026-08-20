@@ -1,6 +1,16 @@
 # 归一化数据结构（web/src/data/esports.json）
 
-由 `web/scripts/build-data.mjs` 从两份爬虫 JSON 归一化生成。
+由 `web/scripts/build-data.mjs` 生成。数据来源优先级：
+**增量合并存储 `data_store/`**（比分最新、含官网已下架的历史比赛）>
+原始爬虫输出 `output/` 与 `dfpl_output/`（首次基线）。
+
+增量合并由 `scripts/merge-data.mjs` 完成（`scripts/update.mjs` 编排）：
+
+- 新快照中存在的比赛**整条覆盖**——比分、状态、名次、进度全部随之刷新；
+- 存储中有、新快照中没有的比赛**保留不删**（官网下架的历史比赛不丢），
+  并在该记录上追加 `missing_from_source: true` 与 `missing_since: <ISO时间>` 标记；
+- 战队/赛事取并集，字段以新数据为准（保证下架比赛的战队引用仍可解析）；
+- `meta.merge_history` 记录最近 50 次合并的统计（新增/更新/缺失保留数）。
 
 ## 顶层结构
 

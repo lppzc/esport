@@ -1,0 +1,80 @@
+# 自动增量更新电竞赛程数据
+#
+# 流程: 定时(每2小时)爬取最新数据 -> 合并进 data_store(增量 + 保留官网已下架
+# 的历史比赛) -> 重建前端 esports.json -> 有变更则提交推送。
+#
+# 手动触发: GitHub 仓库页 Actions -> Auto Update Data -> Run workflow
+name: Auto Update Data
+
+on:
+  schedule:
+    # UTC 时间，每 2 小时的第 20 分钟（北京时间偶数小时 20 分）
+    - cron: '20 */2 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: |
+          pip install 'requests>=2.32,<3'
+          # 仅文档/类型检查需要 node 依赖，构建数据脚本零依赖
+          # npm ci --ignore-scripts --prefix web  # 如需重建 dist 再启用
+
+      - name: Crawl VCT (VALORANT)
+        run: |
+          python vct_crawler.py --out-dir snapshots/vct
+          # 爬虫对个别赛事失败不致命：合并层会保留存储中的旧数据
+
+      - name: Crawl DFPL (Delta Force)
+        run: |
+          python dfpl_crawler.py --all-seasons --out-dir snapshots/dfpl
+
+      - name: Merge incremental updates
+        run: |
+          node scripts/update.mjs
+          node web/scripts/build-data.mjs
+
+      - name: Verify data integrity
+        run: |
+          node -e "
+          const d = require('./web/src/data/esports.json');
+          if (!d.matches.length || !d.teams.length) throw new Error('数据异常: 空 matches/teams');
+          if (d.matches.length < 900) throw new Error('数据异常: 比赛数骤降 ' + d.matches.length);
+          console.log('数据完整: ' + d.matches.length + ' 场比赛 / ' + d.teams.length + ' 支战队');
+          "
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data_store web/src/data/esports.json
+          if git diff --cached --quiet; then
+            echo "数据无变化，跳过提交"
+          else
+            git commit -m "chore(data): 自动增量更新 $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi

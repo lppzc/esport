@@ -1,3 +1,8 @@
+# ---- 数据流水线 ----
+# data_store/ 是持久化合并存储（含官网已下架的历史比赛），必须提交
+# snapshots/ 为每次爬取的原始快照与归档，可再生，不提交
+snapshots/
+
 # ---- Node / 前端构建 ----
 web/node_modules/
 web/dist/

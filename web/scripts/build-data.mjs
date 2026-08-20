@@ -5,16 +5,37 @@
  * 因此不同游戏中同名（甚至同 logo）的战队天然是两个不同实体。
  *   - 无畏契约战队：`vct:<team_id>`（如 vct:21 = BLG）
  *   - 三角洲行动战队：`dfpl:<club_id>`（如 dfpl:blg = BLG，与上面的 BLG 完全无关）
+ *
+ * 数据来源优先级：增量合并存储 data_store/（含历史保留的比赛，比分最新）
+ * > 原始爬虫输出 output/ 与 dfpl_output/（首次基线）。
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const root = join(here, '..', '..');
 
-const dfpl = JSON.parse(readFileSync(join(root, 'dfpl_output', 'dfpl_data.json'), 'utf8'));
-const vct = JSON.parse(readFileSync(join(root, 'output', 'vct_data.json'), 'utf8'));
+/** 按优先级取第一个存在的数据文件 */
+function pickSource(candidates, label) {
+  for (const p of candidates) {
+    if (existsSync(p)) return { path: p, data: JSON.parse(readFileSync(p, 'utf8')) };
+  }
+  throw new Error(`找不到 ${label} 数据文件: ${candidates.join(' 或 ')}`);
+}
+
+const vctSrc = pickSource([
+  join(root, 'data_store', 'vct_data.json'),
+  join(root, 'output', 'vct_data.json'),
+], 'VCT');
+const dfplSrc = pickSource([
+  join(root, 'data_store', 'dfpl_data.json'),
+  join(root, 'dfpl_output', 'dfpl_data.json'),
+], 'DFPL');
+const vct = vctSrc.data;
+const dfpl = dfplSrc.data;
+console.log(`数据源: VCT <- ${vctSrc.path}`);
+console.log(`数据源: DFPL <- ${dfplSrc.path}`);
 
 const games = [
   { id: 'vct', name: '无畏契约', sub: 'VALORANT · VCT', color: '#ff4655' },

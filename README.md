@@ -31,7 +31,7 @@ npm run build:data
 npm run typecheck && npm run build   # -> web/dist/
 ```
 
-爬虫依赖 Python 3.10+（标准库实现，无第三方依赖）：
+爬虫依赖 Python 3.10+ 与 `requests`（`pip install -r requirements.txt`）：
 
 ```bash
 python vct_crawler.py                # 全部官方展示赛事
@@ -71,17 +71,46 @@ python dfpl_crawler.py
 ## 数据流水线
 
 ```
-vct_crawler.py ──▶ output/vct_data.json ─┐
-                                         ├─▶ web/scripts/build-data.mjs
-dfpl_crawler.py ─▶ dfpl_output/          │      （归一化：战队ID加游戏前缀、
-    dfpl_data.json ──────────────────────┘       统一比赛 schema、排序）
-                                                  │
-                                                  ▼
-                                        web/src/data/esports.json
-                                                  │  rollup 打包时内联
-                                                  ▼
-                                        web/dist/ （纯静态，可任意托管）
+定时触发（GitHub Actions 每 2 小时 / 本地 scripts/update.ps1）
+   │
+   ├─ python vct_crawler.py  --out-dir snapshots/vct        # 爬最新快照
+   ├─ python dfpl_crawler.py --all-seasons --out-dir snapshots/dfpl
+   │
+   ├─ node scripts/update.mjs                               # 增量合并进 data_store/
+   │      · 新快照中有的比赛 → 整条覆盖（比分/状态/名次刷新）
+   │      · 存储有、新快照没有 → 保留不删（官网下架的历史比赛不丢）
+   │      · 本次爬过该赛事却缺失 → 标记 missing_from_source
+   │
+   └─ node web/scripts/build-data.mjs                       # 重建前端 esports.json
+          （优先读 data_store/，无则回退 output/ 原始基线）
+                                        │
+                                        ▼
+                              web/src/data/esports.json
+                                        │  rollup 打包时内联
+                                        ▼
+                              web/dist/ （纯静态，可任意托管）
 ```
+
+本地手动更新：
+
+```bash
+powershell -File scripts/update.ps1              # 全流水线（爬取→合并→重建）
+powershell -File scripts/update.ps1 -SkipVct     # 只更新 DFPL
+powershell -File scripts/update.ps1 -SkipCrawl   # 仅合并已有快照
+```
+
+本地定时（Windows 任务计划，每 2 小时）：
+
+```
+schtasks /Create /TN "EsportsDataUpdate" /SC HOURLY /MO 2 /TR ^
+  "powershell -ExecutionPolicy Bypass -File E:\project\esport\scripts\update.ps1"
+```
+
+远端自动更新由 [`.github/workflows/auto-update-data.yml`](.github/workflows/auto-update-data.yml)
+驱动：定时爬取 → 增量合并 → 数据完整性校验（比赛数骤降会中止防止误覆盖）→
+有变更自动提交推送。也支持在仓库 Actions 页面手动触发。
+
+> 爬虫对个别赛事抓取失败不致命——合并层会原样保留存储中的旧数据，下次成功再刷新。
 
 统一的比赛 schema：
 
@@ -103,8 +132,14 @@ MultiMatch { kind: 'multi', teamIds[], ranking[] }              // DFPL：多队
 esport/
 ├── vct_crawler.py          # VCT 爬虫
 ├── dfpl_crawler.py         # DFPL 爬虫
-├── output/                 # VCT 爬虫输出
-├── dfpl_output/            # DFPL 爬虫输出
+├── output/                 # VCT 爬虫输出（初始化基线）
+├── dfpl_output/            # DFPL 爬虫输出（初始化基线）
+├── data_store/             # 持久化合并存储（增量更新核心，提交至 git）
+├── scripts/
+│   ├── update.mjs          # 增量合并编排
+│   ├── merge-data.mjs      # 合并层（覆盖刷新 + 历史保留）
+│   └── update.ps1          # 本地全流水线（爬取→合并→重建）
+├── snapshots/              # 每次爬取快照（gitignore，可再生）
 └── web/                    # 前端网站
     ├── scripts/            # build-data / build / dev 脚本
     ├── src/                # React 源码 + 内联数据
