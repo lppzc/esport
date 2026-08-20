@@ -22,3 +22,6 @@ venv/
 *.swp
 Thumbs.db
 .DS_Store
+
+# ---- 工具缓存 ----
+.gh-cache/

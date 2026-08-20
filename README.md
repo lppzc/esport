@@ -121,7 +121,7 @@ MultiMatch { kind: 'multi', teamIds[], ranking[] }              // DFPL：多队
 
 ## 文档
 
-- [web/README.md](web/README.md) —— 前端架构、构建工具链、开发指南
+- [web/README.md](web/README.md) —— 前端架构、构建工具链、开发指南、部署与 nginx 缓存配置
 - [docs/security-review.md](docs/security-review.md) —— 安全审查报告
 - [docs/data-schema.md](docs/data-schema.md) —— 归一化数据结构字段说明
 - 各爬虫输出目录内的 README 说明字段含义

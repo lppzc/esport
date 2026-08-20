@@ -49,6 +49,71 @@ npm run dev                    # 开发服务器 http://127.0.0.1:5173（watch �
   `contain-intrinsic-size`，视口外卡片跳过渲染
 - 数据打包内联，无运行时网络请求（除战队 logo 图片懒加载）
 
+## 部署与缓存（nginx）
+
+生产构建产物带 **content hash**：`dist/app.<hash>.js` / `dist/app.<hash>.css`，
+文件名由内容决定——内容变则文件名变；`dist/index.html` 自动引用带 hash 的
+实际文件名。据此可对静态资源设置**永不重新下载**的长缓存，同时保证发版后
+用户立即拿到新版本。
+
+### nginx 配置示例
+
+```nginx
+# ── 电竞赛程站点缓存策略（按需调整路径前缀）──────────────────────
+
+# 1) 入口 HTML：每次都向服务器校验（命中则 304，开销极小）。
+#    它是唯一指向新 hash 文件名的入口，绝不能长缓存。
+location = /index.html {
+    add_header Cache-Control "no-cache";
+}
+
+# 2) 带 hash 的构建产物：内容变 → 文件名变 → URL 变，
+#    同名 URL 内容永不改变，可安全缓存一年、免重新下载。
+#    注意正则必须是 [\w-]+：Rollup 的 hash 是 base64url 字符集
+#    （含大小写字母，如 app.DO1SlR4W.js），不是纯十六进制！
+location ~* ^/app\.[\w-]+\.(js|css)$ {
+    add_header Cache-Control "public, immutable, max-age=31536000";
+}
+
+# 3) 其余文件（如 data/esports.json）：短缓存兜底。
+#    data/esports.json 是 CI 每 2 小时更新的活数据，只作核对用途
+#    （运行时数据已内联进 app.<hash>.js），绝不能 immutable。
+location / {
+    add_header Cache-Control "public, max-age=300";
+}
+```
+
+### 注意事项（踩坑点）
+
+1. **hash 字符集不是十六进制**。Rollup 的 `[hash]` 用 base64url 编码，
+   产出形如 `app.DO1SlR4W.js` 的文件名。nginx 正则写 `[0-9a-f]+` 会
+   匹配不到文件，缓存规则整条失效——必须用 `[\w-]+`。
+2. **数据内联在 JS 里，`immutable` 因此是安全的**。赛程数据在构建时
+   打包进 `app.<hash>.js`：CI 更新数据 → 重新构建 → JS 内容变 → hash 变
+   → 新 URL，浏览器自动绕过旧缓存。不需要为数据单独做缓存穿透。
+3. **`index.html` 必须 `no-cache`**（校验式缓存，不是 `no-store`）。
+   它是新旧产物唯一的切换开关；配合 ETag/Last-Modified 命中时只回 304。
+4. **旧 hash 文件每次构建会被清空**（build 前全量 rm dist）。部署新版本
+   与个别用户已打开的旧页面之间理论上存在一个极小的 404 窗口，刷新即恢复；
+   如需零窗口可部署时保留上一版 hash 文件。
+5. **`add_header` 的继承陷阱**：nginx 中 location 内一旦出现 `add_header`，
+   就不再继承上层块的任何 `add_header`。若 http/server 层还有安全响应头
+   （如 `X-Content-Type-Options`），需在每个 location 里重复声明。
+6. **子路径部署**：本站资源引用为相对路径（`./app.xxx.js`），可部署在任意
+   子路径下；此时上述正则去掉 `^` 锚点或加上路径前缀，如
+   `~* ^/esports/app\.[\w-]+\.(js|css)$`。
+7. **改过 rollup 配置后要重启 dev 服务器**：`npm run dev` 的 watch 重建
+   使用启动时加载进内存的旧配置，不重启会继续产出无 hash 的 `app.js`。
+
+### 验证缓存生效
+
+```bash
+curl -sI https://your-domain/app.DO1SlR4W.js | grep -i cache-control
+# 期待：public, immutable, max-age=31536000
+curl -sI https://your-domain/ | grep -i cache-control
+# 期待：no-cache
+```
+
 ## 同名战队区分
 
 见[根 README](../README.md#同名战队如何区分本项目的关键设计)与

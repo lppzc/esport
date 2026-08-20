@@ -2,6 +2,7 @@
  * Rollup 配置：TypeScript + React 打包。
  * 全链路进程内执行（rollup native 为 dlopen 加载，无子进程），适配沙箱环境。
  */
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -12,7 +13,7 @@ import commonjs from '@rollup/plugin-commonjs';
 const here = dirname(fileURLToPath(import.meta.url));
 const root = here; // rollup.config.mjs 位于项目根（web/）
 
-/** 把 import 的 CSS 收集起来，输出为单个 app.css 资源 */
+/** 把 import 的 CSS 收集起来，输出为单个带 content hash 的 app.<hash>.css 资源 */
 function css() {
   const styles = new Map();
   return {
@@ -25,7 +26,9 @@ function css() {
       return null;
     },
     generateBundle() {
-      this.emitFile({ type: 'asset', fileName: 'app.css', source: [...styles.values()].join('\n') });
+      const source = [...styles.values()].join('\n');
+      const hash = createHash('sha256').update(source).digest('hex').slice(0, 8);
+      this.emitFile({ type: 'asset', fileName: `app.${hash}.css`, source });
     },
   };
 }
@@ -63,18 +66,24 @@ function replaceNodeEnv() {
   };
 }
 
-/** 生成 dist/index.html（引用打包产物） */
+/** 生成 dist/index.html，自动引用带 hash 的实际产物文件名 */
 function html() {
   return {
     name: 'emit-html',
     buildStart() {
       this.addWatchFile(join(root, 'index.html'));
     },
-    generateBundle() {
+    generateBundle(_options, bundle) {
+      // 从产物清单中找到入口 chunk 与 CSS 资产的实际（带 hash）文件名
+      const entry = Object.values(bundle).find((f) => f.type === 'chunk' && f.isEntry);
+      const cssAsset = Object.keys(bundle).find((name) => /^app\.[0-9a-f]+\.css$/.test(name));
+      if (!entry || !cssAsset) {
+        this.error(`html: 未找到入口或 CSS 产物（entry=${!!entry}, css=${!!cssAsset}）`);
+      }
       let tpl = readFileSync(join(root, 'index.html'), 'utf8');
       tpl = tpl.replace(
         '<script type="module" src="/src/main.tsx"></script>',
-        '<link rel="stylesheet" href="./app.css" />\n    <script type="module" src="./app.js"></script>'
+        `<link rel="stylesheet" href="./${cssAsset}" />\n    <script type="module" src="./${entry.fileName}"></script>`
       );
       this.emitFile({ type: 'asset', fileName: 'index.html', source: tpl });
     },
@@ -86,9 +95,9 @@ export default {
   output: {
     dir: join(root, 'dist'),
     format: 'esm',
-    entryFileNames: 'app.js',
+    entryFileNames: 'app.[hash].js',
     chunkFileNames: '[name]-[hash].js',
-    assetFileNames: '[name][extname]',
+    assetFileNames: '[name]-[hash][extname]',
   },
   plugins: [
     replaceNodeEnv(),
