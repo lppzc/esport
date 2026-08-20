@@ -30,13 +30,20 @@ function css() {
   };
 }
 
-/** JSON → ESM default export（JSON 是合法 JS 字面量，直接内联） */
+/** JSON → ESM default export（先 JSON.parse 校验再重新序列化内联，
+ *  防止恶意构造的"伪 JSON"文件在构建时被执行——安全审查 L-1 修复） */
 function json() {
   return {
     name: 'inline-json',
     transform(code, id) {
       if (id.endsWith('.json')) {
-        return { code: `const data = ${code.trim()};\nexport default data;`, map: null };
+        let parsed;
+        try {
+          parsed = JSON.parse(code);
+        } catch (e) {
+          this.error({ id, message: `Invalid JSON: ${e.message}` });
+        }
+        return { code: `const data = ${JSON.stringify(parsed)};\nexport default data;`, map: null };
       }
       return null;
     },
