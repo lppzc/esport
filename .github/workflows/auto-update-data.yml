@@ -1,6 +1,6 @@
 # 自动增量更新电竞赛程数据
 #
-# 流程: 定时(每2小时)爬取最新数据 -> 合并进 data_store(增量 + 保留官网已下架
+# 流程: 定时(每30分钟)爬取最新数据 -> 合并进 data_store(增量 + 保留官网已下架
 # 的历史比赛) -> 重建前端 esports.json -> 有变更则提交推送。
 #
 # 手动触发: GitHub 仓库页 Actions -> Auto Update Data -> Run workflow
@@ -8,8 +8,8 @@ name: Auto Update Data
 
 on:
   schedule:
-    # UTC 时间，每 2 小时的第 20 分钟（北京时间偶数小时 20 分）
-    - cron: '20 */2 * * *'
+    # UTC 时间，每 30 分钟（北京时间每半小时）
+    - cron: '*/30 * * * *'
   workflow_dispatch: {}
 
 permissions:

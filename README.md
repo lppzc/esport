@@ -74,7 +74,7 @@ python dfpl_crawler.py
 ## 数据流水线
 
 ```
-定时触发（GitHub Actions 每 2 小时 / 本地 scripts/update.ps1）
+定时触发（GitHub Actions 每 30 分钟 / 本地 scripts/update.ps1）
    │
    ├─ python vct_crawler.py  --out-dir snapshots/vct        # 爬最新快照
    ├─ python dfpl_crawler.py --all-seasons --out-dir snapshots/dfpl
