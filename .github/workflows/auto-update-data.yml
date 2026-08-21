@@ -53,6 +53,10 @@ jobs:
         run: |
           python dfpl_crawler.py --all-seasons --out-dir snapshots/dfpl
 
+      - name: Crawl CS (Counter-Strike)
+        run: |
+          python cs_crawler.py --out-dir snapshots/cs
+
       - name: Merge incremental updates
         run: |
           node scripts/update.mjs

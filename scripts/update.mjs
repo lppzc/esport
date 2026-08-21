@@ -17,18 +17,43 @@ import { mkdirSync, copyFileSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import {
   root, snapshotPaths,
-  ensureStore, loadStore, saveStore, loadSnapshot,
+  ensureStore, hasStore, loadStore, saveStore, loadSnapshot,
   mergeVct, mergeDfpl, mergeCs,
 } from './merge-data.mjs';
 
 const now = new Date().toISOString();
+
+/* ---------- 0. 快照新鲜度防护 ---------- */
+/**
+ * 防止数据回退：若本地快照的抓取时间(fetched_at)早于持久存储中已合并的
+ * 抓取时间，说明本地快照是旧的（例如 CI 已更新过数据、本地 snapshots/
+ * 还是上次爬的），此时用旧快照"整条覆盖"会把新数据倒退回去。
+ * 场景还原：2026-08-21 本地接入 CS 重跑流水线时，昨晚的本地 VCT/DFPL
+ * 旧快照把 CI 当天上午刚更新的"已结束"状态覆盖回了"进行中"。
+ */
+function snapshotIsStale(game) {
+  const snap = loadSnapshot(game);
+  if (!snap) return { stale: false, snap: null };
+  if (!hasStore(game)) return { stale: false, snap };
+  const store = loadStore(game);
+  const snapAt = Date.parse(snap?.meta?.fetched_at || '');
+  const storeAt = Date.parse(store?.meta?.fetched_at || '');
+  if (Number.isFinite(snapAt) && Number.isFinite(storeAt) && snapAt < storeAt) {
+    console.warn(
+      `[${game}] 跳过合并：本地快照 (${snap.meta.fetched_at}) 早于存储数据 (${store.meta.fetched_at})，` +
+      `合并会把新数据倒退回旧状态。请先重新爬取：python ${game}_crawler.py`
+    );
+    return { stale: true, snap: null };
+  }
+  return { stale: false, snap };
+}
 
 /* ---------- 1. 初始化存储（首次运行时从基线快照建立） ---------- */
 const inited = ensureStore();
 if (inited.length) console.log(`[init] 初始化存储: ${inited.join(', ')}（基线 = 原始爬虫输出）`);
 
 /* ---------- 2. VCT 合并 ---------- */
-const vctSnap = loadSnapshot('vct');
+const vctSnap = snapshotIsStale('vct').snap;
 if (vctSnap) {
   // 本次真实爬到的赛事：快照 events 即成功列表，meta.failed_events 里是失败的
   const failed = new Set((vctSnap.meta.failed_events || []).map((f) => f.event_id));
@@ -43,7 +68,7 @@ if (vctSnap) {
 }
 
 /* ---------- 3. DFPL 合并 ---------- */
-const dfplSnap = loadSnapshot('dfpl');
+const dfplSnap = snapshotIsStale('dfpl').snap;
 if (dfplSnap) {
   const crawled = new Set(dfplSnap.meta.season_ids || []);
   const { data, stats } = mergeDfpl(loadStore('dfpl'), dfplSnap, crawled, now);
@@ -56,7 +81,7 @@ if (dfplSnap) {
 }
 
 /* ---------- 4. CS 合并 ---------- */
-const csSnap = loadSnapshot('cs');
+const csSnap = snapshotIsStale('cs').snap;
 if (csSnap) {
   // 本次真实爬到的赛事：快照 events 即成功列表（CS 爬虫单次全量抓取，无 failed 概念）
   const crawled = new Set(csSnap.events.map((e) => e.event_id));

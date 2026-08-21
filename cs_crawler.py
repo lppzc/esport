@@ -212,13 +212,25 @@ def normalize_team_ref(info: dict) -> dict:
     }
 
 
-def unified_status(state: dict) -> int:
-    """源数据 state.status: '0'=未开始 '2'=已结束; live_status=='1' 表示直播中。
+def unified_status(state: dict, start_ts: Any, now: _dt.datetime | None = None) -> int:
+    """源数据 state.status: '0'=未开始 '2'=已结束; live_status=='1' 表示该场有直播安排/标记。
+
+    注意: live_status='1' 不等于"正在进行"——未开赛的未来比赛也会带此标记(实测
+    电竞世俱杯八强开赛前 8 小时即为 1)。因此判定"进行中"必须叠加时间闸门:
+    仅当 live_status=1 且开赛时间已过才视为进行中, 否则未开赛的比赛会被错标。
+
     统一映射为 1=未开始 2=进行中 3=已结束(与 VCT matchStatusId 一致)。"""
     if str(state.get("status", "")) == "2":
         return 3
     if str(state.get("live_status", "")) == "1":
-        return 2
+        if now is None:
+            now = _dt.datetime.now(TZ)
+        try:
+            start = _dt.datetime.fromtimestamp(int(start_ts), TZ)
+        except (TypeError, ValueError, OSError, OverflowError):
+            return 1  # 开赛时间异常时保守处理为未开始
+        if now >= start:
+            return 2
     return 1
 
 
@@ -237,7 +249,7 @@ def normalize_match(item: dict) -> dict:
                 "winner": "A" if b.get("result") == "t1" else ("B" if b.get("result") == "t2" else ""),
             }
         )
-    status_id = unified_status(state)
+    status_id = unified_status(state, mc.get("plan_ts"))
     return {
         "match_id": mc.get("id", ""),
         "event_id": tt.get("id", ""),
