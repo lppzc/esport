@@ -543,7 +543,16 @@ button { font-family: inherit; }
 
 .picker-search input:focus { border-color: var(--accent); }
 
-.picker-body { overflow-y: auto; padding: 0 10px 8px; flex: 1; }
+.picker-body {
+  overflow-y: auto;
+  padding: 0 10px 8px;
+  flex: 1;
+  /* flex 子项默认 min-height:auto 会阻止滚动区收缩——移动端面板滚不动的主因 */
+  min-height: 0;
+  /* 滚到列表边缘不再链式穿透到底下的页面 */
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
 
 .picker-empty { padding: 30px 0; text-align: center; color: var(--text-dim); font-size: 13px; }
 
@@ -652,4 +661,28 @@ button { font-family: inherit; }
   .mc-time { position: static; margin-left: auto; padding-top: 6px; }
   .picker-grid { grid-template-columns: 1fr; }
   .day-group { scroll-margin-top: 200px; }
+
+  /* 战队筛选面板：移动端改为底部抽屉（拇指可达 + 独立滚动区） */
+  .picker {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    width: 100%;
+    max-width: none;
+    /* dvh 随移动端浏览器工具栏伸缩，避免 vh 的视口高估 */
+    max-height: 86dvh;
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+    animation: sheet-up 0.22s ease-out;
+  }
+
+  /* 底部安全区（全面屏手机的手势条），需配合 index.html 的 viewport-fit=cover */
+  .picker-tip { padding-bottom: calc(14px + env(safe-area-inset-bottom)); }
+}
+
+@keyframes sheet-up {
+  from { transform: translateY(24px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
