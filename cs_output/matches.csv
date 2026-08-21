@@ -1,0 +1,411 @@
+﻿match_id,event_id,event_name,match_date,status_zh,team_a_id,team_a_name,score_a,team_b_id,team_b_name,score_b,match_format,stage
+csgo_mc_2396801,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-14T08:35:00+08:00,已结束,hltv_team_13726,METANOIA Wolves,0,csgo_tm_11905,paiN.A,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396627,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-14T16:00:00+08:00,已结束,hltv_team_4246,Enjoy,2,hltv_team_13528,Misa,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396837,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-14T16:00:00+08:00,已结束,hltv_team_13012,HyperSpirit,2,hltv_team_13613,Bebop,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396873,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-14T16:00:00+08:00,已结束,hltv_team_12960,Fire Flux,2,csgo_tm_11480,Guess,1,BO3,小组赛 胜者组 首轮
+csgo_mc_2396582,csgo_tt_8261,电竞世俱杯 2026,2026-08-14T19:00:00+08:00,已结束,csgo_tm_4411,NIP,2,hltv_team_12394,BB,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396586,csgo_tt_8261,电竞世俱杯 2026,2026-08-14T19:00:00+08:00,已结束,csgo_tm_4863,TYLOO,0,csgo_tm_8840,LVG,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396630,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-14T19:00:00+08:00,已结束,csgo_tm_11110,Honvéd,1,hltv_team_13877,Noir Verse,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396838,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-14T19:00:00+08:00,已结束,csgo_tm_11176,MOUZ.N,1,hltv_team_4246,Enjoy,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396874,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-14T19:20:00+08:00,已结束,hltv_team_13827,NEW VISION,2,hltv_team_13865,Arch,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396809,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,hltv_team_13814,INOX Division,2,hltv_team_13892,ex-MANA,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396811,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,hltv_team_13181,BASEMENT BOYS,2,hltv_team_13766,Phantom Academy,1,BO3,小组赛 胜者组 首轮
+csgo_mc_2396812,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,hltv_team_13571,SINQU,1,hltv_team_12609,Lavked,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396813,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,hltv_team_13528,Misa,2,csgo_tm_11446,Leo,1,BO3,小组赛 胜者组 首轮
+csgo_mc_2396814,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,csgo_tm_10503,OG,2,hltv_team_13914,Privateer,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396815,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:00:00+08:00,已结束,hltv_team_12960,Fire Flux,1,csgo_tm_11699,Baks,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396583,csgo_tt_8261,电竞世俱杯 2026,2026-08-14T21:30:00+08:00,已结束,csgo_tm_11241,B8,2,csgo_tm_9565,Vitality,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396584,csgo_tt_8261,电竞世俱杯 2026,2026-08-14T21:30:00+08:00,已结束,hltv_team_13286,FUT,2,csgo_tm_4494,MOUZ,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396810,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:30:00+08:00,已结束,csgo_tm_11176,MOUZ.N,2,hltv_team_12087,Lazer Cats,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396875,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-14T21:30:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_13599,benched gods,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396629,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-14T22:00:00+08:00,已结束,hltv_team_13681,Inner Circle Academy,1,hltv_team_13893,ex-Sashi Academy,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396839,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-14T22:00:00+08:00,已结束,csgo_tm_6089,TLR,0,csgo_tm_11110,Honvéd,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396876,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-14T22:00:00+08:00,已结束,hltv_team_13161,eternal premium,2,hltv_team_13914,Privateer,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396628,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-15T01:00:00+08:00,已结束,hltv_team_13894,Mai Tai,1,hltv_team_12267,UNiTY,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396816,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,hltv_team_13814,INOX Division,2,csgo_tm_11176,MOUZ.N,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396817,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,hltv_team_13892,ex-MANA,2,hltv_team_12087,Lazer Cats,1,BO3,小组赛 败者组 首轮
+csgo_mc_2396820,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_13528,Misa,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396821,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,csgo_tm_11446,Leo,2,hltv_team_13599,benched gods,1,BO3,小组赛 败者组 首轮
+csgo_mc_2396822,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,csgo_tm_10503,OG,0,csgo_tm_11699,Baks,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396823,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:00:00+08:00,已结束,hltv_team_13914,Privateer,0,hltv_team_12960,Fire Flux,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396840,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-15T01:00:00+08:00,已结束,hltv_team_13776,Just Players,1,csgo_tm_4869,ENCE,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396877,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-15T01:00:00+08:00,已结束,hltv_team_13766,Phantom Academy,1,hltv_team_13971,Revise,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396581,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T01:15:00+08:00,已结束,hltv_team_12895,K27,0,csgo_tm_9215,MIBR,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396585,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T01:15:00+08:00,已结束,hltv_team_12467,PARIVISION,2,csgo_tm_8474,100 Thieves,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396818,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:25:00+08:00,已结束,hltv_team_12609,Lavked,2,hltv_team_13181,BASEMENT BOYS,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396819,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T01:25:00+08:00,已结束,hltv_team_13571,SINQU,1,hltv_team_13766,Phantom Academy,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396365,csgo_tt_9306,BetBoom 风暴 第4赛季,2026-08-15T04:05:00+08:00,已结束,hltv_team_12677,Galorys,2,hltv_team_13902,BORRACHEIROS,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2396803,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-15T05:00:00+08:00,已结束,hltv_team_13706,Pugdesonesto,0,hltv_team_13811,QUINTESSÊNCIA,2,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396844,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-15T06:13:07+08:00,已结束,hltv_team_13877,Noir Verse,1,csgo_tm_7120,Entropy,0,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396366,csgo_tt_9306,BetBoom 风暴 第4赛季,2026-08-15T07:00:00+08:00,已结束,hltv_team_12144,BESTIA,2,hltv_team_13756,Alka,1,BO3,淘汰赛 1/4决赛
+csgo_mc_2396804,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-15T07:50:00+08:00,已结束,hltv_team_13726,METANOIA Wolves,2,hltv_team_13938,MEIA NOITE,1,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396631,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-15T16:00:00+08:00,已结束,hltv_team_13528,Misa,2,hltv_team_13894,Mai Tai,1,BO3,小组赛 败者组 首轮
+csgo_mc_2396878,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-15T16:00:00+08:00,已结束,hltv_team_12960,Fire Flux,0,hltv_team_13827,NEW VISION,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396880,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-15T16:00:00+08:00,已结束,hltv_team_13613,Bebop,1,csgo_tm_11110,Honvéd,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396881,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-15T18:50:00+08:00,已结束,csgo_tm_11176,MOUZ.N,2,csgo_tm_4869,ENCE,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396587,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T19:00:00+08:00,已结束,csgo_tm_6248,Mongolz,1,csgo_tm_4608,NAVI,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396590,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T19:00:00+08:00,已结束,hltv_team_12257,Wildcard,1,csgo_tm_4773,paiN,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396632,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-15T19:00:00+08:00,已结束,csgo_tm_11110,Honvéd,0,hltv_team_13681,Inner Circle Academy,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396843,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-15T19:00:00+08:00,已结束,hltv_team_13668,Atreides,1,hltv_team_13279,LPH,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396846,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-15T19:00:00+08:00,已结束,hltv_team_13892,ex-MANA,0,hltv_team_13528,Misa,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396883,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-15T19:00:00+08:00,已结束,csgo_tm_11480,Guess,2,hltv_team_13865,Arch,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396825,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T21:00:00+08:00,已结束,hltv_team_13571,SINQU,0,hltv_team_13181,BASEMENT BOYS,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396826,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T21:00:00+08:00,已结束,csgo_tm_11446,Leo,1,hltv_team_13528,Misa,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396827,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T21:00:00+08:00,已结束,hltv_team_12960,Fire Flux,1,csgo_tm_10503,OG,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396824,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-15T21:35:00+08:00,已结束,csgo_tm_11176,MOUZ.N,1,hltv_team_13892,ex-MANA,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396845,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-15T21:45:00+08:00,已结束,hltv_team_13893,ex-Sashi Academy,0,csgo_tm_11248,Saw-youngsters,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396633,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-15T22:00:00+08:00,已结束,hltv_team_4246,Enjoy,2,hltv_team_12267,UNiTY,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396879,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-15T22:00:00+08:00,已结束,hltv_team_13914,Privateer,0,hltv_team_13766,Phantom Academy,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396588,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T22:20:00+08:00,已结束,csgo_tm_8297,FURIA,2,csgo_tm_9996,9z,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396589,csgo_tt_8261,电竞世俱杯 2026,2026-08-15T22:25:00+08:00,已结束,hltv_team_13592,magic,2,csgo_tm_4914, 3DMAX,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396592,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T00:50:00+08:00,已结束,csgo_tm_10245,JJH,0,csgo_tm_11861,Aurora,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396368,csgo_tt_9306,BetBoom 风暴 第4赛季,2026-08-16T01:00:00+08:00,已结束,csgo_tm_6033,Keyd,2,hltv_team_12677,Galorys,1,BO3,淘汰赛 半决赛
+csgo_mc_2396634,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-16T01:00:00+08:00,已结束,hltv_team_13877,Noir Verse,2,hltv_team_13893,ex-Sashi Academy,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396828,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T01:00:00+08:00,已结束,hltv_team_13814,INOX Division,2,hltv_team_13528,Misa,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2396829,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T01:00:00+08:00,已结束,csgo_tm_11699,Baks,1,hltv_team_13181,BASEMENT BOYS,2,BO3,淘汰赛 1/4决赛
+csgo_mc_2396830,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T01:00:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_13892,ex-MANA,1,BO3,淘汰赛 1/4决赛
+csgo_mc_2396831,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T01:00:00+08:00,已结束,hltv_team_12609,Lavked,2,csgo_tm_10503,OG,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2396884,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-16T01:00:00+08:00,已结束,hltv_team_13161,eternal premium,1,hltv_team_13971,Revise,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396591,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T02:10:00+08:00,已结束,csgo_tm_7020,Spirit,2,csgo_tm_7532,BIG,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396367,csgo_tt_9306,BetBoom 风暴 第4赛季,2026-08-16T04:15:00+08:00,已结束,csgo_tm_9455,Imperial,2,hltv_team_12144,BESTIA,1,BO3,淘汰赛 半决赛
+csgo_mc_2396805,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-16T05:00:00+08:00,已结束,csgo_tm_11905,paiN.A,0,hltv_team_13756,Alka,2,BO3,淘汰赛 胜者组 决赛
+csgo_mc_2396806,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-16T07:45:00+08:00,已结束,hltv_team_13811,QUINTESSÊNCIA,2,hltv_team_13726,METANOIA Wolves,0,BO3,淘汰赛 败者组 半决赛
+csgo_mc_2396635,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-16T16:00:00+08:00,已结束,hltv_team_13892,ex-MANA,1,hltv_team_13901,ex-RUSTEC,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396698,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-16T16:00:00+08:00,已结束,csgo_tm_7187,Nexus,0,hltv_team_13281,Bushido Wildcats,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396841,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-16T16:00:00+08:00,已结束,hltv_team_12457,RoundsGG,1,hltv_team_13761,Vexar,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396596,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T19:00:00+08:00,已结束,csgo_tm_8840,LVG,0,csgo_tm_9565,Vitality,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396598,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T19:00:00+08:00,已结束,csgo_tm_6248,Mongolz,2,csgo_tm_4773,paiN,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396636,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-16T19:00:00+08:00,已结束,hltv_team_13747,BERG,0,csgo_tm_7865,HAVU,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396842,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-16T19:00:00+08:00,已结束,hltv_team_12857,FORZE Reload,2,hltv_team_13714,Donstu,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396847,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-16T19:00:00+08:00,已结束,csgo_tm_4869,ENCE,0,hltv_team_13683,WROTBERRY,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396848,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-16T19:00:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,hltv_team_13646,Fortress,0,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396699,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-16T19:10:00+08:00,已结束,hltv_team_13901,ex-RUSTEC,0,hltv_team_13681,Inner Circle Academy,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396833,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T21:15:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_12609,Lavked,0,BO3,淘汰赛 半决赛
+csgo_mc_2396595,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T21:20:00+08:00,已结束,csgo_tm_4494,MOUZ,2,hltv_team_12467,PARIVISION,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396597,csgo_tt_8261,电竞世俱杯 2026,2026-08-16T21:25:00+08:00,已结束,hltv_team_13592,magic,2,csgo_tm_9996,9z,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396832,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-16T21:40:00+08:00,已结束,hltv_team_13814,INOX Division,1,hltv_team_13181,BASEMENT BOYS,2,BO3,淘汰赛 半决赛
+csgo_mc_2396882,csgo_tt_9334,KOKONISTER Satpayev 电竞杯 2026 决赛,2026-08-16T21:40:00+08:00,已结束,hltv_team_12194,Rune Eaters,3,hltv_team_13803,DNK,0,BO5,淘汰赛 决赛
+csgo_mc_2396849,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-16T21:45:00+08:00,已结束,hltv_team_13894,Mai Tai,2,hltv_team_13747,BERG,0,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396850,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-16T21:45:00+08:00,已结束,csgo_tm_11110,Honvéd,0,hltv_team_13759,mellren,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396637,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-16T22:00:00+08:00,已结束,hltv_team_12267,UNiTY,2,hltv_team_13528,Misa,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396700,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-16T22:00:00+08:00,已结束,hltv_team_12889,G2 Ares,1,csgo_tm_12009,Permitta,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396885,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-16T22:00:00+08:00,已结束,hltv_team_12960,Fire Flux,2,csgo_tm_11480,Guess,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396594,csgo_tt_8261,电竞世俱杯 2026,2026-08-17T00:00:00+08:00,已结束,csgo_tm_6665,Astralis,2,csgo_tm_4411,NIP,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396369,csgo_tt_9306,BetBoom 风暴 第4赛季,2026-08-17T01:00:00+08:00,已结束,csgo_tm_6033,Keyd,0,csgo_tm_9455,Imperial,2,BO3,淘汰赛 决赛
+csgo_mc_2396638,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-17T01:00:00+08:00,已结束,hltv_team_13893,ex-Sashi Academy,0,hltv_team_13681,Inner Circle Academy,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396887,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-17T01:00:00+08:00,已结束,hltv_team_13868,DragonClaw,0,hltv_team_13573,ex-Zero Tenacity,1,BO3,小组赛 胜者组 首轮
+csgo_mc_2396886,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-17T01:10:00+08:00,已结束,hltv_team_13161,eternal premium,0,hltv_team_13766,Phantom Academy,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396593,csgo_tt_8261,电竞世俱杯 2026,2026-08-17T01:45:00+08:00,已结束,hltv_team_12468,Legacy,2,csgo_tm_9215,MIBR,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396835,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-17T02:25:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_13181,BASEMENT BOYS,1,BO3,淘汰赛 决赛
+csgo_mc_2396834,csgo_tt_9261,ESL 挑战者联赛 第52赛季 欧洲杯 3,2026-08-17T02:35:00+08:00,已结束,hltv_team_12609,Lavked,2,hltv_team_13814,INOX Division,1,BO3,淘汰赛 季军赛
+csgo_mc_2396807,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-17T05:00:00+08:00,已结束,csgo_tm_11905,paiN.A,1,hltv_team_13811,QUINTESSÊNCIA,2,BO3,淘汰赛 败者组 决赛
+csgo_mc_2396808,csgo_tt_9313, CCT 2026 南美挑战者 系列赛 2,2026-08-17T08:10:00+08:00,已结束,hltv_team_13756,Alka,2,hltv_team_13811,QUINTESSÊNCIA,1,BO3,淘汰赛  决赛
+csgo_mc_2396893,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-17T15:36:43+08:00,已结束,hltv_team_13901,ex-RUSTEC,1,hltv_team_13868,DragonClaw,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396639,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-17T16:00:00+08:00,已结束,csgo_tm_12009,Permitta,1,hltv_team_12267,UNiTY,2,BO3,淘汰赛 决胜赛
+csgo_mc_2396894,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-17T16:40:00+08:00,已结束,hltv_team_13599,benched gods,2,hltv_team_13766,Phantom Academy,1,BO3,淘汰赛 首轮
+csgo_mc_2396851,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-17T19:00:00+08:00,已结束,hltv_team_13668,Atreides,0,hltv_team_13893,ex-Sashi Academy,1,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396852,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-17T19:00:00+08:00,已结束,csgo_tm_4869,ENCE,2,hltv_team_13747,BERG,0,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396890,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-17T19:00:00+08:00,已结束,hltv_team_13681,Inner Circle Academy,2,hltv_team_13573,ex-Zero Tenacity,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396888,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-17T19:30:00+08:00,已结束,hltv_team_13827,NEW VISION,0,hltv_team_13761,Vexar,2,BO3,淘汰赛 首轮
+csgo_mc_2396640,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-17T20:25:00+08:00,已结束,hltv_team_13877,Noir Verse,1,hltv_team_13901,ex-RUSTEC,2,BO3,淘汰赛 决胜赛
+csgo_mc_2396853,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-17T21:45:00+08:00,已结束,hltv_team_13279,LPH,2,csgo_tm_11248,Saw-youngsters,0,BO3,淘汰赛 胜者组 1/4决赛
+csgo_mc_2396889,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-17T22:00:00+08:00,已结束,hltv_team_13972,Raccoons,2,hltv_team_12960,Fire Flux,0,BO3,淘汰赛 首轮
+csgo_mc_2396891,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-17T22:10:00+08:00,已结束,csgo_tm_7187,Nexus,0,hltv_team_12889,G2 Ares,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396854,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-17T23:20:00+08:00,已结束,hltv_team_13759,mellren,2,hltv_team_13877,Noir Verse,0,BO3,淘汰赛 胜者组 1/4决赛
+csgo_mc_2396641,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-17T23:25:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,hltv_team_13681,Inner Circle Academy,1,BO3,淘汰赛 决胜赛
+csgo_mc_2396952,csgo_tt_9326,Exort Fiesta 系列赛 第1季 封闭预选,2026-08-18T01:10:00+08:00,已结束,hltv_team_13971,Revise,2,hltv_team_12857,FORZE Reload,1,BO3,淘汰赛 首轮
+csgo_mc_2396642,csgo_tt_9323,CCT 2026 欧洲系列赛 第7季封闭预选,2026-08-18T02:00:00+08:00,已结束,hltv_team_4246,Enjoy,1,csgo_tm_7865,HAVU,2,BO3,淘汰赛 决胜赛
+csgo_mc_2396892,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-18T02:00:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,csgo_tm_12009,Permitta,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396643,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-18T16:00:00+08:00,已结束,hltv_team_13054,PCIFIC,0,hltv_team_13776,Just Players,2,BO3,小组赛 第一轮
+csgo_mc_2396749,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-18T16:00:00+08:00,已结束,csgo_tm_4869,ENCE,2,hltv_team_13894,Mai Tai,1,BO3,小组赛 第一轮
+csgo_mc_2396953,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-18T16:00:00+08:00,已结束,hltv_team_12889,G2 Ares,0,csgo_tm_12009,Permitta,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396644,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-18T19:00:00+08:00,已结束,csgo_tm_10867,MASONIC,2,hltv_team_13613,Bebop,0,BO3,小组赛 第一轮
+csgo_mc_2396750,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-18T19:00:00+08:00,已结束,hltv_team_13613,Bebop,0,hltv_team_13599,benched gods,1,BO3,小组赛 第一轮
+csgo_mc_2396855,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-18T19:00:00+08:00,已结束,csgo_tm_11110,Honvéd,2,csgo_tm_7120,Entropy,1,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396856,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-18T19:00:00+08:00,已结束,hltv_team_13646,Fortress,0,hltv_team_13892,ex-MANA,2,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396954,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-18T19:00:00+08:00,已结束,hltv_team_13573,ex-Zero Tenacity,2,hltv_team_13901,ex-RUSTEC,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396895,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,hltv_team_13479,Omega,0,hltv_team_12960,Fire Flux,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396898,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,hltv_team_13546,Strael Bora,0,csgo_tm_6089,TLR,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396899,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,csgo_tm_11641,Metizport,2,hltv_team_13714,Donstu,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396900,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,csgo_tm_11176,MOUZ.N,1,hltv_team_13214,SPARTA,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396901,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,hltv_team_13838,EAC,2,hltv_team_13646,Fortress,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396902,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:00:00+08:00,已结束,csgo_tm_12009,Permitta,1,csgo_tm_10503,OG,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396897,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T21:25:59+08:00,已结束,hltv_team_13973,Color,1,hltv_team_13528,Misa,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396857,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-18T21:45:00+08:00,已结束,hltv_team_13683,WROTBERRY,2,hltv_team_13894,Mai Tai,0,BO3,淘汰赛 胜者组 1/4决赛
+csgo_mc_2396858,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-18T21:45:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,hltv_team_13528,Misa,1,BO3,淘汰赛 胜者组 1/4决赛
+csgo_mc_2396645,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-18T22:00:00+08:00,已结束,csgo_tm_11446,Leo,1,hltv_team_13901,ex-RUSTEC,2,BO3,小组赛 第一轮
+csgo_mc_2396751,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-18T22:00:00+08:00,已结束,hltv_team_13573,ex-Zero Tenacity,2,hltv_team_13761,Vexar,0,BO3,小组赛 第一轮
+csgo_mc_2396896,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-18T22:10:00+08:00,已结束,csgo_tm_7120,Entropy,0,hltv_team_13054,PCIFIC,2,BO3,小组赛 胜者组 首轮
+csgo_mc_2396752,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-19T01:00:00+08:00,已结束,csgo_tm_11110,Honvéd,2,hltv_team_13877,Noir Verse,0,BO3,小组赛 第一轮
+csgo_mc_2396903,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_12960,Fire Flux,1,hltv_team_13054,PCIFIC,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396904,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_13479,Omega,1,csgo_tm_7120,Entropy,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396905,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_13973,Color,2,csgo_tm_6089,TLR,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396907,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,csgo_tm_11641,Metizport,2,hltv_team_13214,SPARTA,1,BO3,小组赛 胜者组 决赛
+csgo_mc_2396908,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_13714,Donstu,0,csgo_tm_11176,MOUZ.N,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396909,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_13838,EAC,0,csgo_tm_10503,OG,2,BO3,小组赛 胜者组 决赛
+csgo_mc_2396910,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:00:00+08:00,已结束,hltv_team_13646,Fortress,0,csgo_tm_12009,Permitta,2,BO3,小组赛 败者组 首轮
+csgo_mc_2396646,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-19T01:15:00+08:00,已结束,hltv_team_12609,Lavked,0,csgo_tm_7865,HAVU,2,BO3,小组赛 第一轮
+csgo_mc_2396906,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T01:25:00+08:00,已结束,hltv_team_13528,Misa,2,hltv_team_13546,Strael Bora,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396647,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-19T16:00:00+08:00,已结束,csgo_tm_11609,Genone,2,hltv_team_12267,UNiTY,0,BO3,小组赛 第一轮
+csgo_mc_2396753,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-19T16:00:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,hltv_team_13552,Endless Journey,1,BO3,小组赛 第一轮
+csgo_mc_2396955,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-19T16:00:00+08:00,已结束,hltv_team_13681,Inner Circle Academy,2,csgo_tm_11176,MOUZ.N,1,BO3,淘汰赛 第1轮
+csgo_mc_2396648,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-19T19:00:00+08:00,已结束,hltv_team_12889,G2 Ares,0,hltv_team_13573,ex-Zero Tenacity,2,BO3,小组赛 第一轮
+csgo_mc_2396859,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-19T19:00:00+08:00,已结束,hltv_team_13528,Misa,1,hltv_team_13893,ex-Sashi Academy,2,BO3,淘汰赛 败者组 第2轮
+csgo_mc_2396860,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-19T19:00:00+08:00,已结束,csgo_tm_11248,Saw-youngsters,2,hltv_team_13892,ex-MANA,1,BO3,淘汰赛 败者组 第2轮
+csgo_mc_2396956,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-19T19:00:00+08:00,已结束,hltv_team_13012,HyperSpirit,2,csgo_tm_12009,Permitta,1,BO3,淘汰赛 第1轮
+csgo_mc_2396754,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-19T19:15:00+08:00,已结束,hltv_team_13924,Black Phoenix,0,hltv_team_13972,Raccoons,2,BO3,小组赛 第一轮
+csgo_mc_2396911,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T21:00:00+08:00,已结束,csgo_tm_7120,Entropy,1,hltv_team_12960,Fire Flux,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396913,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T21:00:00+08:00,已结束,csgo_tm_11176,MOUZ.N,0,hltv_team_13214,SPARTA,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396861,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-19T21:29:59+08:00,已结束,hltv_team_13894,Mai Tai,0,csgo_tm_11110,Honvéd,1,BO3,淘汰赛 败者组 第2轮
+csgo_mc_2396912,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T21:49:24+08:00,已结束,hltv_team_13528,Misa,0,csgo_tm_6089,TLR,1,BO3,小组赛 败者组 决赛
+csgo_mc_2396862,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-19T21:55:00+08:00,已结束,hltv_team_13877,Noir Verse,2,csgo_tm_4869,ENCE,1,BO3,淘汰赛 败者组 第2轮
+csgo_mc_2396649,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-19T22:00:00+08:00,已结束,hltv_team_13924,Black Phoenix,2,hltv_team_13281,Bushido Wildcats,1,BO3,小组赛 第一轮
+csgo_mc_2396755,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-19T22:00:00+08:00,已结束,hltv_team_12609,Lavked,2,hltv_team_13971,Revise,1,BO3,小组赛 第一轮
+csgo_mc_2396914,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-19T22:00:00+08:00,已结束,csgo_tm_12009,Permitta,0,hltv_team_13838,EAC,2,BO3,小组赛 败者组 决赛
+csgo_mc_2396957,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-19T22:00:00+08:00,已结束,hltv_team_4246,Enjoy,0,hltv_team_13573,ex-Zero Tenacity,2,BO3,淘汰赛 第1轮
+csgo_mc_2396599,csgo_tt_8261,电竞世俱杯 2026,2026-08-19T22:10:00+08:00,已结束,csgo_tm_5995,G2,2,csgo_tm_6665,Astralis,1,BO3,淘汰赛 十六强
+csgo_mc_2396601,csgo_tt_8261,电竞世俱杯 2026,2026-08-19T22:20:00+08:00,已结束,hltv_team_13286,FUT,2,hltv_team_13592,magic,1,BO3,淘汰赛 十六强
+csgo_mc_2396650,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-20T01:00:00+08:00,已结束,hltv_team_13970,Drip Too Hard,0,hltv_team_13012,HyperSpirit,2,BO3,小组赛 第一轮
+csgo_mc_2396756,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-20T01:00:00+08:00,已结束,csgo_tm_12009,Permitta,1,hltv_team_13321,Falcons Force,2,BO3,小组赛 第一轮
+csgo_mc_2396915,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T01:00:00+08:00,已结束,hltv_team_13054,PCIFIC,0,hltv_team_13214,SPARTA,2,BO3,淘汰赛 1/4决赛
+csgo_mc_2396916,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T01:00:00+08:00,已结束,csgo_tm_6089,TLR,0,csgo_tm_10503,OG,2,BO3,淘汰赛 1/4决赛
+csgo_mc_2396917,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T01:00:00+08:00,已结束,csgo_tm_11641,Metizport,2,hltv_team_12960,Fire Flux,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2396918,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T01:00:00+08:00,已结束,hltv_team_13838,EAC,1,hltv_team_13973,Color,2,BO3,淘汰赛 1/4决赛
+csgo_mc_2396958,csgo_tt_9314,NODWIN Clutch 系列赛 第11季 封闭预选,2026-08-20T01:00:00+08:00,已结束,csgo_tm_11110,Honvéd,2,hltv_team_13281,Bushido Wildcats,1,BO3,淘汰赛 第1轮
+csgo_mc_2396600,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T01:40:00+08:00,已结束,csgo_tm_8297,FURIA,2,csgo_tm_11861,Aurora,1,BO3,淘汰赛 十六强
+csgo_mc_2396602,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T01:55:00+08:00,已结束,csgo_tm_9928,GL,1,csgo_tm_4494,MOUZ,2,BO3,淘汰赛 十六强
+csgo_mc_2396651,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-20T16:00:00+08:00,已结束,hltv_team_12889,G2 Ares,2,hltv_team_13613,Bebop,0,BO3,小组赛 第二轮
+csgo_mc_2396757,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-20T16:00:00+08:00,已结束,hltv_team_13281,Bushido Wildcats,2,hltv_team_13972,Raccoons,1,BO3,小组赛 第二轮
+csgo_mc_2396603,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T19:00:00+08:00,已结束,csgo_tm_4608,NAVI,0,hltv_team_12468,Legacy,2,BO3,淘汰赛 十六强
+csgo_mc_2396604,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T19:00:00+08:00,已结束,csgo_tm_11283,Falcons,2,csgo_tm_6248,Mongolz,0,BO3,淘汰赛 十六强
+csgo_mc_2396652,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-20T19:00:00+08:00,已结束,hltv_team_12609,Lavked,0,hltv_team_12267,UNiTY,2,BO3,小组赛 第二轮
+csgo_mc_2396863,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-20T19:00:00+08:00,已结束,hltv_team_13893,ex-Sashi Academy,0,hltv_team_13877,Noir Verse,2,BO3,淘汰赛 败者组 第3轮
+csgo_mc_2396864,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-20T19:00:00+08:00,已结束,csgo_tm_11110,Honvéd,2,csgo_tm_11248,Saw-youngsters,1,BO3,淘汰赛 败者组 第3轮
+csgo_mc_2396758,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-20T19:50:00+08:00,已结束,hltv_team_13573,ex-Zero Tenacity,0,hltv_team_13599,benched gods,2,BO3,小组赛 第二轮
+csgo_mc_2396919,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T21:00:00+08:00,已结束,csgo_tm_10503,OG,2,hltv_team_13214,SPARTA,1,BO3,淘汰赛 半决赛
+csgo_mc_2396920,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-20T21:00:00+08:00,已结束,csgo_tm_11641,Metizport,2,hltv_team_13973,Color,1,BO3,淘汰赛 半决赛
+csgo_mc_2396606,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T21:30:00+08:00,已结束,csgo_tm_11241,B8,0,csgo_tm_7020,Spirit,2,BO3,淘汰赛 十六强
+csgo_mc_2396605,csgo_tt_8261,电竞世俱杯 2026,2026-08-20T21:35:00+08:00,已结束,csgo_tm_6667,FaZe,0,csgo_tm_9565,Vitality,2,BO3,淘汰赛 十六强
+csgo_mc_2396865,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-20T21:45:00+08:00,已结束,hltv_team_13279,LPH,0,hltv_team_13683,WROTBERRY,2,BO3,淘汰赛 胜者组 半决赛
+csgo_mc_2396866,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-20T21:45:00+08:00,已结束,hltv_team_13759,mellren,2,hltv_team_13281,Bushido Wildcats,1,BO3,淘汰赛 胜者组 半决赛
+csgo_mc_2396653,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-20T22:00:00+08:00,已结束,hltv_team_13054,PCIFIC,1,hltv_team_13970,Drip Too Hard,2,BO3,小组赛 第二轮
+csgo_mc_2396759,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-20T22:00:00+08:00,已结束,hltv_team_12609,Lavked,0,csgo_tm_4869,ENCE,2,BO3,小组赛 第二轮
+csgo_mc_2396607,csgo_tt_8261,电竞世俱杯 2026,2026-08-21T00:20:00+08:00,已结束,csgo_tm_5995,G2,1,csgo_tm_8297,FURIA,2,BO3,淘汰赛 八强
+csgo_mc_2396654,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-21T01:00:00+08:00,已结束,csgo_tm_11446,Leo,2,hltv_team_13281,Bushido Wildcats,1,BO3,小组赛 第二轮
+csgo_mc_2396760,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-21T01:00:00+08:00,已结束,hltv_team_13321,Falcons Force,2,csgo_tm_11110,Honvéd,1,BO3,小组赛 第二轮
+csgo_mc_2396921,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-21T01:10:00+08:00,已结束,hltv_team_13214,SPARTA,1,hltv_team_13973,Color,2,BO3,淘汰赛 季军赛
+csgo_mc_2396922,csgo_tt_9262,ESL 挑战者联赛 第52赛季 欧洲杯 4,2026-08-21T01:10:00+08:00,已结束,csgo_tm_10503,OG,1,csgo_tm_11641,Metizport,2,BO3,淘汰赛 决赛
+csgo_mc_2396959,csgo_tt_9316,UKIC 游戏联赛 秋季 2026 ,2026-08-21T02:00:00+08:00,已结束,csgo_tm_6089,TLR,2,hltv_team_13914,Privateer,0,BO3,淘汰赛 胜者组 决赛
+csgo_mc_2396960,csgo_tt_9316,UKIC 游戏联赛 秋季 2026 ,2026-08-21T02:00:00+08:00,已结束,hltv_team_13974,Ryvex,2,csgo_tm_11278,Coalesce,0,BO3,淘汰赛 败者组 首轮
+csgo_mc_2396961,csgo_tt_9320, CCT 2026 竞争者欧洲系列赛 第8季,2026-08-21T02:15:00+08:00,已结束,hltv_team_13975,Nordic Valor,0,hltv_team_13945,MAYBE,2,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396962,csgo_tt_9320, CCT 2026 竞争者欧洲系列赛 第8季,2026-08-21T02:15:00+08:00,已结束,hltv_team_12857,FORZE Reload,2,hltv_team_13707,Younglings,0,BO3,淘汰赛 胜者组 首轮
+csgo_mc_2396655,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-21T16:00:00+08:00,未开始,hltv_team_13924,Black Phoenix,0,hltv_team_13901,ex-RUSTEC,0,BO3,小组赛 第二轮
+csgo_mc_2396701,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-21T16:00:00+08:00,未开始,hltv_team_13937,Nordic Partners,0,hltv_team_13619,BET-M,0,BO3,小组赛 第一轮
+csgo_mc_2396761,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-21T16:00:00+08:00,未开始,hltv_team_13894,Mai Tai,0,hltv_team_13552,Endless Journey,0,BO3,小组赛 第二轮
+csgo_mc_2396608,csgo_tt_8261,电竞世俱杯 2026,2026-08-21T19:00:00+08:00,进行中,hltv_team_13286,FUT,0,csgo_tm_4494,MOUZ,0,BO3,淘汰赛 八强
+csgo_mc_2396656,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-21T19:00:00+08:00,未开始,csgo_tm_11609,Genone,0,csgo_tm_7865,HAVU,0,BO3,小组赛 第二轮
+csgo_mc_2396702,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-21T19:00:00+08:00,未开始,hltv_team_13973,Color,0,hltv_team_13681,Inner Circle Academy,0,BO3,小组赛 第一轮
+csgo_mc_2396762,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-21T19:00:00+08:00,未开始,csgo_tm_12009,Permitta,0,hltv_team_13761,Vexar,0,BO3,小组赛 第二轮
+csgo_mc_2396867,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-21T19:00:00+08:00,未开始,hltv_team_13877,Noir Verse,0,hltv_team_13279,LPH,0,BO3,淘汰赛 败者组 1/4决赛
+csgo_mc_2396868,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-21T21:45:00+08:00,未开始,csgo_tm_11110,Honvéd,0,hltv_team_13281,Bushido Wildcats,0,BO3,淘汰赛 败者组 1/4决赛
+csgo_mc_2396609,csgo_tt_8261,电竞世俱杯 2026,2026-08-21T21:55:00+08:00,进行中,hltv_team_12468,Legacy,0,csgo_tm_11283,Falcons,0,BO3,淘汰赛 八强
+csgo_mc_2396657,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-21T22:00:00+08:00,未开始,csgo_tm_10867,MASONIC,0,hltv_team_13573,ex-Zero Tenacity,0,BO3,小组赛 第二轮
+csgo_mc_2396703,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-21T22:00:00+08:00,未开始,hltv_team_13617,ex-RUBY,0,hltv_team_13012,HyperSpirit,0,BO3,小组赛 第一轮
+csgo_mc_2396763,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-21T22:00:00+08:00,未开始,hltv_team_13924,Black Phoenix,0,hltv_team_13613,Bebop,0,BO3,小组赛 第二轮
+csgo_mc_2396610,csgo_tt_8261,电竞世俱杯 2026,2026-08-22T00:50:00+08:00,进行中,csgo_tm_9565,Vitality,0,csgo_tm_7020,Spirit,0,BO3,淘汰赛 八强
+csgo_mc_2396658,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-22T01:00:00+08:00,未开始,hltv_team_13012,HyperSpirit,0,hltv_team_13776,Just Players,0,BO3,小组赛 第二轮
+csgo_mc_2396704,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-22T01:00:00+08:00,未开始,hltv_team_13214,SPARTA,0,csgo_tm_11446,Leo,0,BO3,小组赛 第一轮
+csgo_mc_2396659,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-22T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396705,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-22T16:00:00+08:00,未开始,csgo_tm_11609,Genone,0,hltv_team_13573,ex-Zero Tenacity,0,BO3,小组赛 第一轮
+csgo_mc_2396765,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-22T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396660,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-22T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396706,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-22T19:00:00+08:00,未开始,hltv_team_13908,Butterfly,0,hltv_team_13924,Black Phoenix,0,BO3,小组赛 第一轮
+csgo_mc_2396766,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-22T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396869,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-22T19:00:00+08:00,未开始,hltv_team_13683,WROTBERRY,0,hltv_team_13759,mellren,0,BO3,淘汰赛 胜者组 决赛
+csgo_mc_2396870,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-22T21:45:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 败者组 半决赛
+csgo_mc_2396611,csgo_tt_8261,电竞世俱杯 2026,2026-08-22T22:00:00+08:00,未开始,csgo_tm_8297,FURIA,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396661,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-22T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396707,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-22T22:00:00+08:00,未开始,hltv_team_13814,INOX Division,0,csgo_tm_11110,Honvéd,0,BO3,小组赛 第一轮
+csgo_mc_2396767,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-22T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2397011,csgo_tt_9320, CCT 2026 竞争者欧洲系列赛 第8季,2026-08-22T23:30:00+08:00,未开始,hltv_team_13945,MAYBE,0,hltv_team_12857,FORZE Reload,0,BO3,淘汰赛 胜者组 决赛
+csgo_mc_2396612,csgo_tt_8261,电竞世俱杯 2026,2026-08-23T00:55:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396662,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-23T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396708,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-23T01:00:00+08:00,未开始,hltv_team_13594,CYBERSHOKE Prospects,0,hltv_team_13501,illwill,0,BO3,小组赛 第一轮
+csgo_mc_2396768,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-23T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396613,csgo_tt_8261,电竞世俱杯 2026,2026-08-23T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 季军赛
+csgo_mc_2396663,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-23T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396709,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-23T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396769,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-23T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396664,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-23T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396710,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-23T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396770,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-23T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396871,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-23T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 败者组 决赛
+csgo_mc_2396614,csgo_tt_8261,电竞世俱杯 2026,2026-08-23T19:30:00+08:00,未开始,,TBD,0,,TBD,0,BO5,淘汰赛 总决赛
+csgo_mc_2396872,csgo_tt_9321,CCT 2026 挑战者 欧洲 第5季,2026-08-23T21:45:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛  
+csgo_mc_2396665,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-23T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396711,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-23T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396771,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-23T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396666,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-24T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396712,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-24T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396772,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-24T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396713,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-24T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396667,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-24T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396714,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-24T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396773,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-24T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396668,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-24T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396715,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-24T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396774,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-24T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396775,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-24T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396669,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-25T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396716,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-25T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396717,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-25T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396776,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-25T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396670,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-25T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396718,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-25T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396777,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-25T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396963,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-25T21:00:00+08:00,未开始,hltv_team_13902,BORRACHEIROS,0,hltv_team_13697,Damajuana,0,BO3,小组赛 第一轮
+csgo_mc_2396671,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-25T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396719,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-25T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396964,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-26T00:00:00+08:00,未开始,csgo_tm_11905,paiN.A,0,hltv_team_13979,Peladona,0,BO3,小组赛 第一轮
+csgo_mc_2396672,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-26T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396720,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-26T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396778,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-26T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396965,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-26T03:00:00+08:00,未开始,csgo_tm_10997,Procyon,0,hltv_team_13980,Mansão Maromba,0,BO3,小组赛 第一轮
+csgo_mc_2396966,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-26T06:00:00+08:00,未开始,hltv_team_13756,Alka,0,hltv_team_13706,Pugdesonesto,0,BO3,小组赛 第一轮
+csgo_mc_2396721,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-26T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396923,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-26T17:00:00+08:00,未开始,csgo_tm_11861,Aurora,0,csgo_tm_5995,G2,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396673,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-26T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396722,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-26T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396779,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-26T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396924,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-26T19:30:00+08:00,未开始,csgo_tm_7020,Spirit,0,hltv_team_13926,DENDELE,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396967,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-26T21:00:00+08:00,未开始,hltv_team_13938,MEIA NOITE,0,csgo_tm_11768,ODDIK,0,BO3,小组赛 第一轮
+csgo_mc_2396674,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-26T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396723,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-26T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396780,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-26T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396925,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-26T22:00:00+08:00,未开始,csgo_tm_4608,NAVI,0,hltv_team_12376,M80,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396926,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-26T23:30:00+08:00,未开始,csgo_tm_8297,FURIA,0,csgo_tm_4773,paiN,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396968,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-27T00:00:00+08:00,未开始,hltv_team_13939,ex-GUARA,0,hltv_team_13657,Blitzkrieg,0,BO3,小组赛 第一轮
+csgo_mc_2396675,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-27T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396724,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-27T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396781,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-27T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396969,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-27T03:00:00+08:00,未开始,hltv_team_13026,BESTIA Academy,0,hltv_team_13833,Zetta,0,BO3,小组赛 第一轮
+csgo_mc_2396970,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-27T06:00:00+08:00,未开始,hltv_team_13912,Grêmio,0,hltv_team_13978,Sementes do Mal,0,BO3,小组赛 第一轮
+csgo_mc_2396676,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-27T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396725,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-27T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396782,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-27T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396927,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-27T17:00:00+08:00,未开始,csgo_tm_9565,Vitality,0,hltv_team_13117,Inner Circle,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396677,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-27T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396726,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-27T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396783,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-27T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396928,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-27T19:30:00+08:00,未开始,csgo_tm_4494,MOUZ,0,csgo_tm_9996,9z,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396971,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-27T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396678,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-27T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396727,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-27T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396784,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-27T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396929,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-27T22:00:00+08:00,未开始,hltv_team_12468,Legacy,0,hltv_team_13286,FUT,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396930,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-27T23:30:00+08:00,未开始,csgo_tm_11283,Falcons,0,csgo_tm_8840,LVG,0,BO3,小组赛 胜者组 首轮
+csgo_mc_2396972,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-28T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396679,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-28T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396785,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-28T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396973,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-28T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396974,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-28T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396680,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-28T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396728,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-28T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396786,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-28T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396931,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-28T17:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396681,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-28T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396729,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-28T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396787,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-28T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396932,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-28T19:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 半决赛
+csgo_mc_2396975,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-28T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396682,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-28T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396730,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-28T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396788,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-28T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396933,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-28T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396934,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-28T23:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 半决赛
+csgo_mc_2396976,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-29T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396683,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-29T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396789,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-29T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396977,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-29T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396978,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-29T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第二轮
+csgo_mc_2396684,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-29T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396731,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-29T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396790,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-29T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396935,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-29T17:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396685,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-29T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396732,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-29T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396791,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-29T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396936,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-29T19:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 半决赛
+csgo_mc_2396979,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-29T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396686,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-29T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396733,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-29T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396792,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-29T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396937,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-29T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 首轮
+csgo_mc_2396938,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-29T23:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 半决赛
+csgo_mc_2396980,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-30T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396687,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-30T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396793,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-30T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396981,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-30T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396982,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-30T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396939,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-30T17:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 半决赛
+csgo_mc_2396688,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-30T18:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396794,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-30T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396940,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-30T19:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 半决赛
+csgo_mc_2396689,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-30T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396983,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-30T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396795,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-30T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396941,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-30T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 半决赛
+csgo_mc_2396942,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-30T23:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 半决赛
+csgo_mc_2396690,csgo_tt_9324,CCT 2026 欧洲系列赛 第7季,2026-08-31T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,
+csgo_mc_2396984,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-31T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396796,csgo_tt_9325,Exort Fiesta Series 系列赛 第1季,2026-08-31T02:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 总决赛
+csgo_mc_2396985,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-31T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396986,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-08-31T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第三轮
+csgo_mc_2396734,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-31T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396943,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-31T17:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396735,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-31T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396944,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-31T19:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396736,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-08-31T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396945,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-31T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 胜者组 决赛
+csgo_mc_2396946,csgo_tt_8249,BLAST 波尔图公开赛,2026-08-31T23:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 败者组 决赛
+csgo_mc_2396987,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-01T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396737,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-01T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396988,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-01T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396989,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-01T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396738,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-01T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396739,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-01T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396740,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-01T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396990,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-02T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396741,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-02T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396991,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-02T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396992,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-02T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第四轮
+csgo_mc_2396742,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-02T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396743,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-02T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396744,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-02T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396993,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-03T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396745,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-03T01:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396994,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-03T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396995,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-03T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,小组赛 第五轮
+csgo_mc_2396746,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-03T16:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396747,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-03T19:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2396996,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-03T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396748,csgo_tt_9315,NODWIN Clutch 系列赛 第11季,2026-09-03T22:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 总决赛
+csgo_mc_2396997,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-04T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396998,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-04T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396999,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-04T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396947,csgo_tt_8249,BLAST 波尔图公开赛,2026-09-04T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2397000,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-04T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2397001,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-05T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396948,csgo_tt_8249,BLAST 波尔图公开赛,2026-09-05T00:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 1/4决赛
+csgo_mc_2397002,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-05T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2397003,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-05T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 十六强
+csgo_mc_2396949,csgo_tt_8249,BLAST 波尔图公开赛,2026-09-05T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2397004,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-05T21:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2397005,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-06T00:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396950,csgo_tt_8249,BLAST 波尔图公开赛,2026-09-06T00:30:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2397006,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-06T03:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2397007,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-06T06:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 八强
+csgo_mc_2396951,csgo_tt_8249,BLAST 波尔图公开赛,2026-09-06T18:30:00+08:00,未开始,,TBD,0,,TBD,0,BO5,淘汰赛 决赛
+csgo_mc_2397008,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-06T23:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2397009,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-07T02:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 半决赛
+csgo_mc_2397010,csgo_tt_9340,CCT 2026 南美系列赛 第五季,2026-09-07T05:00:00+08:00,未开始,,TBD,0,,TBD,0,BO3,淘汰赛 总决赛

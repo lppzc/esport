@@ -2,7 +2,7 @@
 
 由 `web/scripts/build-data.mjs` 生成。数据来源优先级：
 **增量合并存储 `data_store/`**（比分最新、含官网已下架的历史比赛）>
-原始爬虫输出 `output/` 与 `dfpl_output/`（首次基线）。
+原始爬虫输出 `output/`、`dfpl_output/` 与 `cs_output/`（首次基线）。
 
 增量合并由 `scripts/merge-data.mjs` 完成（`scripts/update.mjs` 编排）：
 
@@ -17,9 +17,9 @@
 ```jsonc
 {
   "generatedAt": "2026-08-20T...",   // 生成时间 ISO 8601
-  "games":  [ Game, ... ],           // 游戏定义（固定 2 个）
-  "teams":  [ Team, ... ],           // 全部战队（134 支）
-  "matches": [ Match, ... ]          // 全部比赛（952 场，按 startTime 升序）
+  "games":  [ Game, ... ],           // 游戏定义（固定 3 个）
+  "teams":  [ Team, ... ],           // 全部战队
+  "matches": [ Match, ... ]          // 全部比赛（按 startTime 升序）
 }
 ```
 
@@ -27,20 +27,20 @@
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `id` | string | 游戏 ID：`vct` / `dfpl` |
-| `name` | string | 中文名（无畏契约 / 三角洲行动） |
-| `sub` | string | 副标题（VALORANT · VCT / DF 烽火职业联赛） |
+| `id` | string | 游戏 ID：`vct` / `dfpl` / `cs` |
+| `name` | string | 中文名（无畏契约 / 三角洲行动 / 反恐精英） |
+| `sub` | string | 副标题（VALORANT · VCT / DF 烽火职业联赛 / Counter-Strike · HLTV） |
 | `color` | string | 主题色，用于徽章、色条、筛选态 |
 
 ## Team
 
 | 字段 | 类型 | 说明 |
 | --- | --- | --- |
-| `id` | string | **全局唯一**：`游戏前缀:原始ID`。VCT 用 `vct:<team_id>`（如 `vct:21`）；DFPL 用 `dfpl:<club_id>`（如 `dfpl:blg`）。同名战队因前缀不同天然隔离 |
+| `id` | string | **全局唯一**：`游戏前缀:原始ID`。VCT 用 `vct:<team_id>`（如 `vct:21`）；DFPL 用 `dfpl:<club_id>`（如 `dfpl:blg`）；CS 用 `cs:<team_id>`（如 `cs:hltv_team_13924`）。同名战队因前缀不同天然隔离 |
 | `gameId` | string | 所属游戏 |
-| `name` | string | 展示名（缩写，如 BLG、成都AG） |
+| `name` | string | 展示名（缩写，如 BLG、成都AG、Falcons） |
 | `fullName` | string | 全名（与 name 相同时为空字符串） |
-| `logo` | string | logo URL（VCT 取 dark_logo 优先；DFPL 取最新赛季 logo） |
+| `logo` | string | logo URL（VCT 取 dark_logo 优先；DFPL 取最新赛季 logo；CS 取 5EPlay 镜像 logo） |
 
 ### 生成规则
 
@@ -48,7 +48,9 @@
   不同的 NOVA（`vct:30` / `vct:96`），均独立保留；
 - **DFPL**：同一俱乐部在 S1/S2 赛季各有一条记录（名字、logo 相同），
   按 `club_id` 合并为一个战队实体，取最新赛季的名称与 logo；
-  `club_id === 'dd'`（"待定"占位队伍）被排除。
+  `club_id === 'dd'`（"待定"占位队伍）被排除；
+- **CS**：每条爬虫 team 记录即一支战队（5EPlay 为 HLTV 数据镜像，
+  战队原始 id 形如 `hltv_team_*` 或 `csgo_tm_*`，原样保留）。
 
 ## Match（联合类型，按 `kind` 区分）
 
@@ -61,12 +63,12 @@
 | `kind` | `'duel' \| 'multi'` | 赛制 |
 | `startTime` | string | 开始时间，带 +08:00 时区的 ISO 8601（北京时间） |
 | `status` | `'finished' \| 'live' \| 'upcoming' \| 'canceled'` | 状态 |
-| `eventName` | string | 赛事名（如「2026 VCT CN联赛第二赛段」） |
+| `eventName` | string | 赛事名（如「2026 VCT CN联赛第二赛段」「CCT 2026 欧洲系列赛 第7季」） |
 | `stage` | string | 阶段（小组赛/季后赛/常规赛…） |
-| `subStage` | string | 子阶段（组别·周次/进度，点号连接） |
+| `subStage` | string | 子阶段（组别·周次/轮次/进度，点号连接） |
 | `format` | string | 赛制（BO3/BO5…，可为空） |
 
-`kind: 'duel'`（VCT）附加字段：
+`kind: 'duel'`（VCT / CS）附加字段：
 
 | 字段 | 说明 |
 | --- | --- |
@@ -82,16 +84,16 @@
 
 ### 状态映射
 
-| VCT `status_id` | DFPL `status_id` | 归一化 status |
-| --- | --- | --- |
-| 1 | 1 | `upcoming` |
-| 2 | 3 | `live` |
-| 3 | 4 | `finished` |
-| — | 2 | `canceled` |
+| VCT `status_id` | DFPL `status_id` | CS `status_id` | 归一化 status |
+| --- | --- | --- | --- |
+| 1 | 1 | 1 | `upcoming` |
+| 2 | 3 | 2 | `live` |
+| 3 | 4 | 3 | `finished` |
+| — | 2 | — | `canceled` |
 
 ### 过滤规则
 
-- 参赛队伍未公布（VCT team_id 为空 / DFPL 有效队数 < 2）的比赛**不输出**；
+- 参赛队伍未公布（VCT team_id 为空 / DFPL 有效队数 < 2 / CS 队伍为 TBD）的比赛**不输出**；
 - 战队 ID 必须能回溯到 teams 表，否则丢弃（保证引用完整性）。
 
 ## 前端消费方式

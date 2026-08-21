@@ -4,6 +4,7 @@
  *
  *   python vct_crawler.py  --out-dir snapshots/vct
  *   python dfpl_crawler.py --all-seasons --out-dir snapshots/dfpl
+ *   python cs_crawler.py   --out-dir snapshots/cs
  *   node scripts/update.mjs
  *   node web/scripts/build-data.mjs      # 从 data_store 优先读取，重建 esports.json
  *
@@ -17,7 +18,7 @@ import { join } from 'node:path';
 import {
   root, snapshotPaths,
   ensureStore, loadStore, saveStore, loadSnapshot,
-  mergeVct, mergeDfpl,
+  mergeVct, mergeDfpl, mergeCs,
 } from './merge-data.mjs';
 
 const now = new Date().toISOString();
@@ -54,12 +55,26 @@ if (dfplSnap) {
   console.log('[dfpl] 无新快照，跳过合并');
 }
 
-/* ---------- 4. 快照归档（保留最近一次，便于排查） ---------- */
-if (vctSnap || dfplSnap) {
+/* ---------- 4. CS 合并 ---------- */
+const csSnap = loadSnapshot('cs');
+if (csSnap) {
+  // 本次真实爬到的赛事：快照 events 即成功列表（CS 爬虫单次全量抓取，无 failed 概念）
+  const crawled = new Set(csSnap.events.map((e) => e.event_id));
+  const { data, stats } = mergeCs(loadStore('cs'), csSnap, crawled, now);
+  saveStore('cs', data);
+  console.log(
+    `[cs] 新增 ${stats.added} / 更新 ${stats.updated} / 官网缺失保留 ${stats.keptMissing} / 未爬赛事保留 ${stats.keptUntouched}`
+  );
+} else {
+  console.log('[cs] 无新快照，跳过合并');
+}
+
+/* ---------- 5. 快照归档（保留最近一次，便于排查） ---------- */
+if (vctSnap || dfplSnap || csSnap) {
   const archiveDir = join(root, 'snapshots', 'archive');
   mkdirSync(archiveDir, { recursive: true });
   const stamp = now.replace(/[:.]/g, '-').slice(0, 19);
-  for (const game of ['vct', 'dfpl']) {
+  for (const game of ['vct', 'dfpl', 'cs']) {
     if (existsSync(snapshotPaths[game])) {
       copyFileSync(snapshotPaths[game], join(archiveDir, `${game}_${stamp}.json`));
     }

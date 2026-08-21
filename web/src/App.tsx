@@ -263,6 +263,7 @@ export default function App() {
 
       <footer className="site-footer">
         数据来源：VCT 无畏契约赛事（vct.qq.com）· DF 烽火职业联赛（df.qq.com）·
+        CS 赛事（event.5eplay.com，HLTV 数据镜像）·
         战队身份按「游戏 + 队伍」唯一标识
       </footer>
 

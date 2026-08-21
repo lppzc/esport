@@ -25,17 +25,20 @@ export const storeDir = join(root, 'data_store');
 export const storePaths = {
   vct: join(storeDir, 'vct_data.json'),
   dfpl: join(storeDir, 'dfpl_data.json'),
+  cs: join(storeDir, 'cs_data.json'),
 };
 
 export const snapshotPaths = {
   vct: join(root, 'snapshots', 'vct', 'vct_data.json'),
   dfpl: join(root, 'snapshots', 'dfpl', 'dfpl_data.json'),
+  cs: join(root, 'snapshots', 'cs', 'cs_data.json'),
 };
 
 /** 原始爬虫快照目录（初始化存储的基线来源） */
 const baselinePaths = {
   vct: join(root, 'output', 'vct_data.json'),
   dfpl: join(root, 'dfpl_output', 'dfpl_data.json'),
+  cs: join(root, 'cs_output', 'cs_data.json'),
 };
 
 const readJson = (p) => JSON.parse(readFileSync(p, 'utf8'));
@@ -188,6 +191,83 @@ export function mergeDfpl(store, fresh, crawledSeasonIds, now) {
 }
 
 /* ------------------------------------------------------------------ */
+/* CS（5EPlay / HLTV 镜像，duel 赛制，schema 与 VCT 同构）             */
+/* ------------------------------------------------------------------ */
+
+/**
+ * @param {object} store   已有合并存储（cs_data.json 结构）
+ * @param {object} fresh   本次爬取快照
+ * @param {Set<string>} crawledEventIds 本次真实抓取成功的赛事 id
+ * @param {string} now     ISO 时间
+ */
+export function mergeCs(store, fresh, crawledEventIds, now) {
+  const stats = { added: 0, updated: 0, keptMissing: 0, keptUntouched: 0 };
+
+  /* 赛事：并集，新数据优先 */
+  const events = new Map(store.events.map((e) => [e.event_id, e]));
+  for (const [id, fe] of new Map(fresh.events.map((e) => [e.event_id, e]))) {
+    events.set(id, fe);
+  }
+
+  /* 战队：并集，新数据优先；event_ids 取并集（世界排名随之刷新） */
+  const teams = new Map(store.teams.map((t) => [t.team_id, t]));
+  for (const ft of fresh.teams) {
+    const st = teams.get(ft.team_id);
+    if (st) {
+      ft.event_ids = [...new Set([...(st.event_ids || []), ...(ft.event_ids || [])])];
+    }
+    teams.set(ft.team_id, ft);
+  }
+
+  /* 比赛：新数据覆盖；存量保留（按所属赛事是否被爬过打标） */
+  const mFresh = new Map(fresh.matches.map((m) => [m.match_id, m]));
+  const matches = [];
+  const seen = new Set();
+  for (const sm of store.matches) {
+    const fm = mFresh.get(sm.match_id);
+    if (fm) {
+      matches.push(fm);
+      seen.add(fm.match_id);
+      stats.updated++;
+      continue;
+    }
+    if (crawledEventIds.has(sm.event_id)) {
+      if (!sm.missing_from_source) {
+        sm.missing_from_source = true;
+        sm.missing_since = now;
+      }
+      stats.keptMissing++;
+    } else {
+      stats.keptUntouched++;
+    }
+    matches.push(sm);
+  }
+  for (const fm of fresh.matches) {
+    if (!seen.has(fm.match_id)) {
+      matches.push(fm);
+      stats.added++;
+    }
+  }
+  matches.sort((a, b) => (a.match_date || '').localeCompare(b.match_date || ''));
+
+  /* 重算赛事计数 */
+  for (const e of events.values()) {
+    e.match_count = matches.reduce((n, m) => n + (m.event_id === e.event_id ? 1 : 0), 0);
+    e.teams_count = [...teams.values()].reduce(
+      (n, t) => n + ((t.event_ids || []).includes(e.event_id) ? 1 : 0), 0
+    );
+  }
+
+  const merged = {
+    meta: mergeMeta(store.meta, fresh.meta, now, stats, [...crawledEventIds]),
+    events: [...events.values()],
+    teams: [...teams.values()],
+    matches,
+  };
+  return { data: merged, stats };
+}
+
+/* ------------------------------------------------------------------ */
 /* 公共                                                                */
 /* ------------------------------------------------------------------ */
 
@@ -216,7 +296,7 @@ function mergeMeta(storeMeta, freshMeta, now, stats, crawledIds) {
 export function ensureStore() {
   mkdirSync(storeDir, { recursive: true });
   const inited = [];
-  for (const game of ['vct', 'dfpl']) {
+  for (const game of ['vct', 'dfpl', 'cs']) {
     if (existsSync(storePaths[game])) continue;
     const base = baselinePaths[game];
     if (!existsSync(base)) continue;
