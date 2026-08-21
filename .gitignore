@@ -25,3 +25,4 @@ Thumbs.db
 
 # ---- 工具缓存 ----
 .gh-cache/
+.vercel/

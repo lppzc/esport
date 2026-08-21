@@ -49,7 +49,30 @@ npm run dev                    # 开发服务器 http://127.0.0.1:5173（watch �
   `contain-intrinsic-size`，视口外卡片跳过渲染
 - 数据打包内联，无运行时网络请求（除战队 logo 图片懒加载）
 
-## 部署与缓存（nginx）
+## 部署
+
+### Vercel（推荐，零配置托管）
+
+仓库已含 `web/vercel.json`（缓存与安全响应头，与下文 nginx 策略等价）。
+Vercel 项目设置：
+
+| 设置 | 值 |
+| --- | --- |
+| Framework Preset | **Other** |
+| Root Directory | **`web`** |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Install Command | `npm install`（默认值即可） |
+
+CI 每 30 分钟向 master 推送数据提交，Vercel 会自动触发重新构建——
+数据更新即自动上线，无需手动操作。构建产物带 content hash，
+配合 vercel.json 的 `immutable` 缓存策略，发版后用户立即拿到新数据。
+
+> 注意：Vercel 免费版按部署次数有公平使用限制，本站约 48 次构建/天
+> （每次约 30 秒）在限额内；如需省额度可在 Vercel 项目设置里用
+> Ignored Build Step 忽略纯数据提交之外的分支。
+
+### 自托管（nginx）
 
 生产构建产物带 **content hash**：`dist/app.<hash>.js` / `dist/app.<hash>.css`，
 文件名由内容决定——内容变则文件名变；`dist/index.html` 自动引用带 hash 的
