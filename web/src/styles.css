@@ -693,6 +693,142 @@ summary:focus-visible {
   border-top: 1px solid var(--line);
 }
 
+/* ================= 赛事选择面板（两级：赛事 → 阶段） ================= */
+
+.ev-list { display: grid; gap: 6px; }
+
+.ev-item {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: #12182866;
+  overflow: hidden;
+}
+
+.ev-item:hover { background: #16203a; }
+
+.ev-item.partial { border-color: color-mix(in srgb, var(--gc, #6c7bff) 45%, transparent); }
+
+.ev-item.selected {
+  border-color: color-mix(in srgb, var(--gc, #6c7bff) 55%, transparent);
+  background: color-mix(in srgb, var(--gc, #6c7bff) 10%, #121828);
+}
+
+.ev-head { display: flex; align-items: stretch; }
+
+.ev-row {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.12s;
+}
+
+.ev-name {
+  flex: 1;
+  min-width: 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ev-meta { flex: none; font-size: 11px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+
+.ev-expand {
+  flex: none;
+  width: 38px;
+  border: none;
+  border-left: 1px solid var(--line);
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.12s;
+}
+
+.ev-expand:hover { color: var(--text); background: #ffffff08; }
+
+.ev-check {
+  flex: none;
+  width: 20px; height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  font-size: 12px;
+  color: transparent;
+  transition: all 0.12s;
+}
+
+.ev-check.small { width: 16px; height: 16px; font-size: 10px; border-radius: 5px; }
+
+.ev-check.on {
+  color: #fff;
+  border-color: var(--gc, var(--accent));
+  background: var(--gc, var(--accent));
+}
+
+/* 阶段行：整赛部分选中的「−」半选态 */
+.ev-item.partial .ev-check {
+  color: var(--gc, var(--accent));
+  border-color: color-mix(in srgb, var(--gc, #6c7bff) 60%, transparent);
+}
+
+.ev-stages {
+  display: grid;
+  gap: 4px;
+  padding: 2px 8px 8px 34px;
+}
+
+.ev-stage {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 9px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: #0d1119;
+  color: var(--text-dim);
+  font-size: 12.5px;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.12s;
+}
+
+.ev-stage:hover { color: var(--text); }
+
+.ev-stage.selected {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--gc, #6c7bff) 55%, transparent);
+  background: color-mix(in srgb, var(--gc, #6c7bff) 10%, #0d1119);
+}
+
+.ev-stage-name {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ev-stage-count { flex: none; font-size: 10.5px; color: var(--text-dim); font-variant-numeric: tabular-nums; }
+
+/* 赛事筛选 chips（与战队 chips 同容器）：赛事名可能很长，截断保护 */
+.chip.event-chip .chip-name {
+  max-width: 260px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 /* ================= 页脚 ================= */
 .site-footer {
   margin-top: 30px;
@@ -717,6 +853,8 @@ summary:focus-visible {
   .mc-time { position: static; margin-left: auto; padding-top: 6px; }
   .picker-grid { grid-template-columns: 1fr; }
   .match-card { padding: 10px 12px 9px 14px; }
+  .chip.event-chip .chip-name { max-width: 150px; }
+  .ev-stages { padding-left: 24px; }
 
   /* 页头说明：移动端换成折叠版（省出首屏空间） */
   .brand-note:not(.collapsed) { display: none; }

@@ -6,15 +6,17 @@ React 18 + TypeScript + Rollup 构建的纯静态站点。
 
 ```
 src/main.tsx          入口（StrictMode + createRoot）
-src/App.tsx           筛选状态管理（游戏/状态/战队多选 + 排序；localStorage 持久化）+ 布局
-src/data.ts           数据索引（teamById/gameById）、时间工具（北京时间）
+src/App.tsx           筛选状态管理（游戏/状态/战队/赛事及阶段多选 + 排序；localStorage 持久化）+ 布局
+src/data.ts           数据索引（teamById/gameById/events 派生）、时间工具（北京时间）
 src/types.ts          Game/Team/Match 联合类型定义
 src/styles.css        全站样式（CSS 变量主题、深色滚动条）
+src/hooks.ts          弹层共享行为（滚动锁 + Escape 关闭）
 src/data/esports.json 归一化数据（由 scripts/build-data.mjs 生成，打包时内联）
 src/components/
   Timeline.tsx        时间轴（按日分组、今天高亮、空状态）
   MatchCard.tsx       比赛卡片（duel 对阵比分 / multi 多队名次两种赛制）
   TeamPicker.tsx      战队筛选面板（按游戏分组 + 搜索，memo 优化）
+  EventPicker.tsx     赛事筛选面板（赛事 → 阶段两级筛选，如小组赛/季后赛/淘汰赛）
   TeamLogo.tsx        战队 logo（加载失败回退为按战队 ID 着色的色块）
 scripts/
   build-data.mjs      爬虫 JSON → esports.json 归一化（战队 ID 加游戏前缀）
@@ -161,8 +163,8 @@ curl -sI https://your-domain/ | grep -i cache-control
 
 ### 新增弹层的模式
 
-战队筛选面板（`TeamPicker`）确立了移动端弹层模式，后续「按赛事筛选」
-「收藏面板」等直接复用同一套结构：
+战队筛选面板（`TeamPicker`）确立了移动端弹层模式，赛事筛选面板
+（`EventPicker`）已复用同一套结构，后续「收藏面板」等同样直接复用：
 
 - 移动端：底部抽屉（`bottom: 0`、`max-height: 86dvh`、上圆角、
   `sheet-up` 上滑动画、`env(safe-area-inset-bottom)` 底部安全区）；
@@ -170,8 +172,8 @@ curl -sI https://your-domain/ | grep -i cache-control
 - 滚动容器（面板 body）必须有 `min-height: 0` + `overscroll-behavior: contain`，
   否则移动端会出现「面板滚不动、背景在滚」的穿透问题；
 - 打开期间锁页面滚动用 body `position: fixed` 方案（iOS Safari 对
-  `overflow: hidden` 不生效），关闭时还原并恢复滚动位置——参考
-  `TeamPicker.tsx` 的 useEffect。
+  `overflow: hidden` 不生效），关闭时还原并恢复滚动位置——已抽为共享
+  hook（`src/hooks.ts` 的 `useBodyScrollLock` / `useEscapeKey`）。
 
 ### 其他约定
 
