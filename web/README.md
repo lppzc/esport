@@ -6,7 +6,7 @@ React 18 + TypeScript + Rollup 构建的纯静态站点。
 
 ```
 src/main.tsx          入口（StrictMode + createRoot）
-src/App.tsx           筛选状态管理（游戏/状态/战队/排序）+ 布局
+src/App.tsx           筛选状态管理（游戏/状态/战队多选 + 排序；localStorage 持久化）+ 布局
 src/data.ts           数据索引（teamById/gameById）、时间工具（北京时间）
 src/types.ts          Game/Team/Match 联合类型定义
 src/styles.css        全站样式（CSS 变量主题、深色滚动条）

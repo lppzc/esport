@@ -15,16 +15,57 @@ import { TeamLogo } from './components/TeamLogo';
 import { TeamPicker } from './components/TeamPicker';
 import { Timeline } from './components/Timeline';
 
-type GameFilter = string; // 'all' | gameId
-type StatusFilter = 'all' | MatchStatus;
 type SortOrder = 'desc' | 'asc';
 
-const STATUS_OPTIONS: { value: StatusFilter; label: string }[] = [
-  { value: 'all', label: '全部状态' },
+const STATUS_OPTIONS: { value: MatchStatus; label: string }[] = [
   { value: 'live', label: '进行中' },
   { value: 'upcoming', label: '未开始' },
   { value: 'finished', label: '已结束' },
+  { value: 'canceled', label: '已取消' },
 ];
+
+/** 用户筛选偏好的本地持久化：跨访问保留「游戏 / 状态 / 战队 / 排序」选择 */
+const STORAGE_KEY = 'esports-filters-v1';
+const ALL_STATUSES: MatchStatus[] = ['live', 'upcoming', 'finished', 'canceled'];
+
+interface SavedFilters {
+  games: string[];
+  statuses: MatchStatus[];
+  teams: string[];
+  sort: SortOrder;
+}
+
+/** 读取并校验持久化的筛选偏好；数据随 CI 更新会增删战队/游戏，失效 id 直接丢弃 */
+function loadSavedFilters(): SavedFilters {
+  const empty: SavedFilters = { games: [], statuses: [], teams: [], sort: 'desc' };
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if (!raw) return empty;
+    const p = JSON.parse(raw) as Partial<SavedFilters> | null;
+    if (!p || typeof p !== 'object') return empty;
+    const gameIds = new Set(games.map((g) => g.id));
+    const teamIds = new Set(allTeams.map((t) => t.id));
+    return {
+      games: Array.isArray(p.games)
+        ? p.games.filter((x): x is string => typeof x === 'string' && gameIds.has(x))
+        : [],
+      statuses: Array.isArray(p.statuses)
+        ? p.statuses.filter((x): x is MatchStatus => typeof x === 'string' && (ALL_STATUSES as string[]).includes(x))
+        : [],
+      teams: Array.isArray(p.teams)
+        ? p.teams.filter((x): x is string => typeof x === 'string' && teamIds.has(x))
+        : [],
+      sort: p.sort === 'asc' ? 'asc' : 'desc',
+    };
+  } catch {
+    return empty; // 隐私模式 / JSON 损坏等：静默降级为默认
+  }
+}
+
+/** 多选切换：已含则移除，未含则加入 */
+function toggleIn<T>(arr: T[], v: T): T[] {
+  return arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v];
+}
 
 /** 浏览限制：初始只加载时间轴起点起 3 个月内的赛程 */
 const INITIAL_MONTHS = 3;
@@ -48,25 +89,44 @@ function scrollToTodayOrNearest(keys: string[]) {
 }
 
 export default function App() {
-  const [gameFilter, setGameFilter] = useState<GameFilter>('all');
-  const [statusFilter, setStatusFilter] = useState<StatusFilter>('all');
-  const [selectedTeamIds, setSelectedTeamIds] = useState<string[]>([]);
-  const [sortOrder, setSortOrder] = useState<SortOrder>('desc');
+  // 惰性读取一次持久化的筛选偏好，作为各筛选状态的初始值
+  const [savedFilters] = useState(loadSavedFilters);
+  const [selectedGameIds, setSelectedGameIds] = useState<string[]>(savedFilters.games);
+  const [selectedStatuses, setSelectedStatuses] = useState<MatchStatus[]>(savedFilters.statuses);
+  const [selectedTeamIds, setSelectedTeamIds] = useState<string[]>(savedFilters.teams);
+  const [sortOrder, setSortOrder] = useState<SortOrder>(savedFilters.sort);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [visibleMonths, setVisibleMonths] = useState(INITIAL_MONTHS);
 
   // 筛选或排序方向变化后，浏览窗口重置回初始 3 个月
-  const filterSignature = `${gameFilter}|${statusFilter}|${sortOrder}|${selectedTeamIds.join(',')}`;
+  const filterSignature = `${selectedGameIds.join(',')}|${selectedStatuses.join(',')}|${sortOrder}|${selectedTeamIds.join(',')}`;
   const [lastSignature, setLastSignature] = useState(filterSignature);
   if (filterSignature !== lastSignature) {
     setLastSignature(filterSignature);
     setVisibleMonths(INITIAL_MONTHS);
   }
 
+  // 筛选偏好持久化：任何变化即写回 localStorage（空数组=全部，同样如实保存）
+  useEffect(() => {
+    try {
+      localStorage.setItem(
+        STORAGE_KEY,
+        JSON.stringify({
+          games: selectedGameIds,
+          statuses: selectedStatuses,
+          teams: selectedTeamIds,
+          sort: sortOrder,
+        } satisfies SavedFilters),
+      );
+    } catch {
+      /* 存储不可用（隐私模式等）时静默忽略，不影响当次功能 */
+    }
+  }, [selectedGameIds, selectedStatuses, selectedTeamIds, sortOrder]);
+
   const filtered = useMemo(() => {
     const list = allMatches.filter((m) => {
-      if (gameFilter !== 'all' && m.gameId !== gameFilter) return false;
-      if (statusFilter !== 'all' && m.status !== statusFilter) return false;
+      if (selectedGameIds.length > 0 && !selectedGameIds.includes(m.gameId)) return false;
+      if (selectedStatuses.length > 0 && !selectedStatuses.includes(m.status)) return false;
       if (selectedTeamIds.length > 0) {
         const ids = matchTeamIds(m);
         if (!selectedTeamIds.some((t) => ids.includes(t))) return false;
@@ -79,7 +139,7 @@ export default function App() {
         : a.startTime.localeCompare(b.startTime)
     );
     return list;
-  }, [gameFilter, statusFilter, selectedTeamIds, sortOrder]);
+  }, [selectedGameIds, selectedStatuses, selectedTeamIds, sortOrder]);
 
   /**
    * 浏览限制：从排序后列表的起点（desc=最新一场，asc=最旧一场）开始，
@@ -157,36 +217,50 @@ export default function App() {
 
       <div className={`filter-bar${filterCompact ? ' compact' : ''}`}>
         <div className="filter-row">
-          <div className="seg" role="tablist" aria-label="游戏筛选">
+          <div className="seg" role="group" aria-label="游戏筛选（可多选）">
             <button
-              className={`seg-item ${gameFilter === 'all' ? 'active' : ''}`}
-              onClick={() => setGameFilter('all')}
+              className={`seg-item ${selectedGameIds.length === 0 ? 'active' : ''}`}
+              onClick={() => setSelectedGameIds([])}
             >
               全部游戏
             </button>
-            {games.map((g) => (
-              <button
-                key={g.id}
-                className={`seg-item ${gameFilter === g.id ? 'active' : ''}`}
-                style={gameFilter === g.id ? gameStyle(g.color) : undefined}
-                onClick={() => setGameFilter(g.id)}
-              >
-                <span className="seg-dot" style={{ background: g.color }} />
-                {g.name}
-              </button>
-            ))}
+            {games.map((g) => {
+              const on = selectedGameIds.includes(g.id);
+              return (
+                <button
+                  key={g.id}
+                  className={`seg-item ${on ? 'active' : ''}`}
+                  style={on ? gameStyle(g.color) : undefined}
+                  aria-pressed={on}
+                  onClick={() => setSelectedGameIds((prev) => toggleIn(prev, g.id))}
+                >
+                  <span className="seg-dot" style={{ background: g.color }} />
+                  {g.name}
+                </button>
+              );
+            })}
           </div>
 
-          <div className="seg" role="tablist" aria-label="状态筛选">
-            {STATUS_OPTIONS.map((o) => (
-              <button
-                key={o.value}
-                className={`seg-item ${statusFilter === o.value ? 'active' : ''}`}
-                onClick={() => setStatusFilter(o.value)}
-              >
-                {o.label}
-              </button>
-            ))}
+          <div className="seg" role="group" aria-label="状态筛选（可多选）">
+            <button
+              className={`seg-item ${selectedStatuses.length === 0 ? 'active' : ''}`}
+              onClick={() => setSelectedStatuses([])}
+            >
+              全部状态
+            </button>
+            {STATUS_OPTIONS.map((o) => {
+              const on = selectedStatuses.includes(o.value);
+              return (
+                <button
+                  key={o.value}
+                  className={`seg-item ${on ? 'active' : ''}`}
+                  aria-pressed={on}
+                  onClick={() => setSelectedStatuses((prev) => toggleIn(prev, o.value))}
+                >
+                  {o.label}
+                </button>
+              );
+            })}
           </div>
 
           <div className="filter-actions">
@@ -237,6 +311,19 @@ export default function App() {
           {hasMore && (
             <>
               {' '}· 已加载 <b>{visible.length}</b> 场（近 {visibleMonths} 个月）
+            </>
+          )}
+          {selectedGameIds.length > 0 && (
+            <>
+              {' '}· 游戏：{selectedGameIds.map((id) => gameById.get(id)?.name ?? id).join(' / ')}
+            </>
+          )}
+          {selectedStatuses.length > 0 && (
+            <>
+              {' '}· 状态：
+              {selectedStatuses
+                .map((s) => STATUS_OPTIONS.find((o) => o.value === s)?.label ?? s)
+                .join(' / ')}
             </>
           )}
           {selectedTeamIds.length > 0 && <> · 按已选 {selectedTeamIds.length} 支战队筛选</>}
