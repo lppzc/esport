@@ -114,6 +114,48 @@ curl -sI https://your-domain/ | grep -i cache-control
 # 期待：no-cache
 ```
 
+## 响应式与扩展约定
+
+### 断点
+
+| 档位 | 断点 | 行为 |
+| --- | --- | --- |
+| 手机 | `≤ 680px` | 战队筛选面板为**底部抽屉**；页头说明折叠为 `<details>`；筛选栏滚动后进入紧凑态；触控目标加大 |
+| 平板 | `681–1024px` | 默认布局（与桌面一致，列宽自适应） |
+| 桌面 | `> 1024px` | 内容列宽 1080px；面板为居中模态框 |
+
+新增响应式行为时遵守同一断点，不引入新分界线。
+
+### 层级刻度（z-index）
+
+`styles.css` 的 `:root` 定义了层级令牌，新组件一律引用、不要写裸数字：
+
+```css
+--z-sticky: 40;    /* sticky 元素（筛选栏） */
+--z-overlay: 50;   /* 全屏遮罩 */
+--z-dialog: 51;    /* 面板/对话框本体 */
+```
+
+### 新增弹层的模式
+
+战队筛选面板（`TeamPicker`）确立了移动端弹层模式，后续「按赛事筛选」
+「收藏面板」等直接复用同一套结构：
+
+- 移动端：底部抽屉（`bottom: 0`、`max-height: 86dvh`、上圆角、
+  `sheet-up` 上滑动画、`env(safe-area-inset-bottom)` 底部安全区）；
+- 桌面端：居中模态框（`translate(-50%, -50%)`、`pop` 缩放动画）；
+- 滚动容器（面板 body）必须有 `min-height: 0` + `overscroll-behavior: contain`，
+  否则移动端会出现「面板滚不动、背景在滚」的穿透问题；
+- 打开期间锁页面滚动用 body `position: fixed` 方案（iOS Safari 对
+  `overflow: hidden` 不生效），关闭时还原并恢复滚动位置——参考
+  `TeamPicker.tsx` 的 useEffect。
+
+### 其他约定
+
+- 触控目标命中区 ≥ 40px（视觉尺寸可以小，用伪元素扩命中区，如 `.chip-x::after`）；
+- 动画尊重 `prefers-reduced-motion`；键盘焦点用 `:focus-visible` 焦点环；
+- 移动端不自动聚焦输入框（软键盘会遮挡底部抽屉）。
+
 ## 同名战队区分
 
 见[根 README](../README.md#同名战队如何区分本项目的关键设计)与

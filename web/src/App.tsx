@@ -97,6 +97,15 @@ export default function App() {
 
   const hasMore = visible.length < filtered.length;
 
+  // 滚动超过一屏的一小段后，sticky 筛选栏进入紧凑态（省出垂直空间），
+  // 回到顶部还原。passive 监听；值不变时 React 自动 bail out，无重渲染开销。
+  const [filterCompact, setFilterCompact] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setFilterCompact(window.scrollY > 140);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   // 哨兵元素接近视口时自动加载下一段赛程
   const sentinelRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -136,12 +145,17 @@ export default function App() {
             </p>
           </div>
         </div>
+        {/* 页头说明：桌面端直接展示；移动端折叠为可展开的一行提示，节省首屏空间 */}
         <p className="brand-note">
           同名战队按所属游戏区分：BLG / JDG / NOVA / Q9 / TEC / WBG 等名字在不同游戏中是完全不同的战队
         </p>
+        <details className="brand-note collapsed">
+          <summary>ℹ️ 同名战队按所属游戏区分，点击展开详情</summary>
+          <p>BLG / JDG / NOVA / Q9 / TEC / WBG 等名字在不同游戏中是完全不同的战队</p>
+        </details>
       </header>
 
-      <div className="filter-bar">
+      <div className={`filter-bar${filterCompact ? ' compact' : ''}`}>
         <div className="filter-row">
           <div className="seg" role="tablist" aria-label="游戏筛选">
             <button
